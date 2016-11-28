@@ -1,0 +1,12 @@
+.link {
+  &:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+  &--action {
+    &:hover {
+      border-bottom: 1px dashed black;
+    }
+  }
+}

@@ -1,0 +1,918 @@
+{
+  "items": [
+    {
+      "tags": [
+        "c",
+        "windows",
+        "gcc",
+        "tcc"
+      ],
+      "answers": [
+        {
+          "answer_id": 40693515,
+          "title": "MinGW - why is the C &#39;hello world&#39; executable 42kb?",
+          "body": "<p>From <a href=\"http://mingw.org/wiki/Large_executables\" rel=\"nofollow noreferrer\">the FAQ</a>:</p>\n\n<blockquote>\n  <p><strong>Debugging Information</strong></p>\n  \n  <p>The most common reason why executables are larger than\n  expected is that they include debugging information, which is\n  generated when source files are compiled with the \"-g\" option to GCC.\n  Even when your own source files are compiled without debugging\n  information, libraries linked with your executable may have been\n  compiled with \"-g\" (possibly including system libraries that are\n  distributed with MinGW).</p>\n  \n  <p>To exclude debugging information from your executable, simply use the\n  \"strip\" command to remove it, or alternatively use the \"-s\" option\n  when linking.</p>\n  \n  <p><strong>UPX (Ultimate Packer for eXecutables)</strong></p>\n  \n  <p>UPX is a tool that can decrease\n  the size of executables, using very fast and very efficient in-place\n  compression/decompression. It works for Windows and Linux executables\n  and is free for use with all applications (including commercial apps).</p>\n</blockquote>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 4960879,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dca9d59245367978059a1278d9322ff3?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Jesse",
+        "link": "http://stackoverflow.com/users/4960879/jesse"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479563246,
+      "question_id": 40693482,
+      "title": "MinGW - why is the C &#39;hello world&#39; executable 42kb?",
+      "body": "<p>If I compile C hello world with MinGW, the resulting exe is 42Kb. If I use Tiny C Compiler, I get something 2Kb. (in both cases without specifying any options or doing anything interesting, just gcc hello.c -o hello.exe)</p>\n\n<p>Now I am aware that a minimum bit of startup code is needed; but what is the extra 40kb of stuff that mingw puts there, what does it do, why is it needed?</p>\n"
+    },
+    {
+      "tags": [
+        "ruby-on-rails",
+        "ruby",
+        "postgresql"
+      ],
+      "answers": [
+        {
+          "answer_id": 40686464,
+          "title": "Hartl Rails tutorial chapter 2, &quot;hello world&quot; isn&#39;t shown in http://localhost:3000",
+          "body": "<p>It needs to be</p>\n\n<pre><code>root to: \"application#hello\"\n</code></pre>\n"
+        },
+        {
+          "answer_id": 40686480,
+          "title": "Hartl Rails tutorial chapter 2, &quot;hello world&quot; isn&#39;t shown in http://localhost:3000",
+          "body": "<p>Your routes needs to be changed to include <code>to:</code></p>\n\n<pre><code>Rails.application.routes.draw do\n  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html\n  root to: 'application#hello'\nend\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 16,
+        "user_id": 7180308,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9645bb1640ec88ab59e4e039cba25bef?s=128&d=identicon&r=PG&f=1",
+        "display_name": "taniamasania",
+        "link": "http://stackoverflow.com/users/7180308/taniamasania"
+      },
+      "answer_count": 2,
+      "last_activity_date": 1479520620,
+      "question_id": 40686433,
+      "title": "Hartl Rails tutorial chapter 2, &quot;hello world&quot; isn&#39;t shown in http://localhost:3000",
+      "body": "<p>I'm following every step of M. Hartl's Ruby On Rails Tutorial, but stuck on Chapter 2 (\"Hello world\"). I changed the code in <code>application_controller.rb</code>:</p>\n\n<pre><code>class ApplicationController &lt; ActionController::Base\n  protect_from_forgery with: :exception\n\n  def hello\n      render html: \"hello, world!\"\n  end\n\nend\n</code></pre>\n\n<p>And <code>routes.rb</code> to:</p>\n\n<pre><code>Rails.application.routes.draw do\n  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html\n  root 'application#hello'\nend\n</code></pre>\n\n<p>But still my <code>http://localhost:3000</code> page is blank. I'm using Postgres with Rails version 5.0.0.1 and Ruby 2.2.4p230.</p>\n\n<p>__</p>\n\n<p>edit1</p>\n\n<p>Also I created <code>public/index.html</code> with <code>&lt;h1&gt;HELLO WORLD&lt;/h1&gt;</code>, message showed on page</p>\n\n<p>__</p>\n\n<p>edit2</p>\n\n<p>Turns out all you need is to restart your server after making any changes in <code>routes.rb</code></p>\n"
+    },
+    {
+      "tags": [
+        "node.js"
+      ],
+      "answers": [
+        {
+          "answer_id": 40685492,
+          "title": "node js (-bash: syntax error near unexpected token `&quot;Hello World&quot;&#39;)",
+          "body": "<p>Type <code>node</code> then press Enter and THEN type <code>console.log(\"Hello World\")</code></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 13,
+        "user_id": 7180069,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/1403753286331914/picture?type=large",
+        "display_name": "Nabuat Al Jahid",
+        "link": "http://stackoverflow.com/users/7180069/nabuat-al-jahid"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479501091,
+      "question_id": 40685420,
+      "title": "node js (-bash: syntax error near unexpected token `&quot;Hello World&quot;&#39;)",
+      "body": "<p>I just started to learn node.js and I use macbook pro. In its terminal when I write any node.js command like console.log(\"Hello World\"); its shows -bash: syntax error near unexpected token `\"Hello World\"'. How can I solve this?</p>\n"
+    },
+    {
+      "tags": [
+        "docker"
+      ],
+      "answers": [
+        {
+          "answer_id": 40678824,
+          "title": "Docker run hello-world not working",
+          "body": "<p>Is it possible that you have <a href=\"https://jbt.github.io/docker/src/docker.js.html\" rel=\"nofollow noreferrer\">docker.js</a> installed locally?</p>\n\n<p>The output from your command looks like the docker.js <code>docker</code> executable is called instead of the Docker container one.</p>\n\n<p>The log messages that you showed can be found in the docker.js documentation, it looks like you're running that instead of the one you want.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 8,
+        "user_id": 6475028,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/edd7057904773929690238346a0d45b9?s=128&d=identicon&r=PG&f=1",
+        "display_name": "javabatz",
+        "link": "http://stackoverflow.com/users/6475028/javabatz"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479480820,
+      "question_id": 40675829,
+      "title": "Docker run hello-world not working",
+      "body": "<p>I've installed Docker following exactly the documentation on the website but when I try to run <code>docker run hello-world</code>, I get the following output from the terminal:</p>\n\n<pre><code>Saved file tree to doc-filelist.js\nCopied JS to doc-script.js\nCompiled CSS to doc-style.css\n</code></pre>\n\n<p>Does anybody have an idea what is going wrong?</p>\n"
+    },
+    {
+      "tags": [
+        "concourse"
+      ],
+      "answers": [
+        {
+          "answer_id": 40640781,
+          "title": "Getting &quot;failed to ping registry&quot; when trying hello-world on new instance",
+          "body": "<p>You need to either specify specific trusted certs using the <code>ca-certs</code> option in <a href=\"https://github.com/concourse/docker-image-resource\" rel=\"nofollow noreferrer\">https://github.com/concourse/docker-image-resource</a>, or you can override this by specifying the hosts you want to access using <code>insecure-registries</code></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 814,
+        "user_id": 290541,
+        "user_type": "registered",
+        "accept_rate": 61,
+        "profile_image": "https://i.stack.imgur.com/92EyJ.jpg?s=128&g=1",
+        "display_name": "blockcipher",
+        "link": "http://stackoverflow.com/users/290541/blockcipher"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479324868,
+      "question_id": 40640366,
+      "title": "Getting &quot;failed to ping registry&quot; when trying hello-world on new instance",
+      "body": "<p>So, I'm testing a new instance of concourse on a private network that has a secured Docker registry.  From the host perspective, everything works fine.  I made sure that \"docker login\" was run and I can pull an image.  However, when I run the hello-world job, it fails with the following error:</p>\n\n<pre><code>failed to ping registry: 2 error(s) occurred.\n</code></pre>\n\n<p>Below that it lists two URLs for the registry: one http and one https with the following at the end of each:</p>\n\n<pre><code>x509: certificate signed by unknown authority\n</code></pre>\n\n<p>So, my question is, why is this occurring?  Is docker being called from within a container and therefore not able to access the /root/.docker/config.json file that has the login info?  Is there something else that I'm missing?</p>\n\n<p>Thanks in advance.</p>\n"
+    },
+    {
+      "tags": [
+        "c++"
+      ],
+      "answers": [
+        {
+          "answer_id": 40640131,
+          "title": "A lot of mistakes in xiosbase file. Even Hello World doesn&#39;t run. C++",
+          "body": "<p>Try changing your compiler. Try running that in DEV C++, this is great for starters. Your code is all ok.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 7169116,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/97b230bfea34e4091824de3c3c2bb920?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Nietzsche&#39;s Moustache",
+        "link": "http://stackoverflow.com/users/7169116/nietzsches-moustache"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479322626,
+      "question_id": 40639611,
+      "title": "A lot of mistakes in xiosbase file. Even Hello World doesn&#39;t run. C++",
+      "body": "<p>I was writing a small program in C++ to translate infix notation to polish notation and RPN, but after running it a ton of mistakes popped up in xiosbase file. I tried to run a simpler code but xiosbase mistakes are still there.I am just starting to code and I have no idea how header files work (and any other file except the one I am writing).\nThis is Hello World.</p>\n\n<pre><code>#include &lt;iostream&gt;\n#include &lt;cstdlib&gt; \nusing namespace std;\n\nint main()\n{\n    cout &lt;&lt; \"Hello, world!\" &lt;&lt; endl;\n    system(\"pause\");\n    return 0;\n}\n</code></pre>\n\n<p>and here are all the mistakes I get: </p>\n\n<p><img src=\"https://s13.postimg.org/5lb9954fb/Untitled.png\" alt=\"https://s13.postimg.org/5lb9954fb/Untitled.png\"></p>\n\n<p>Keep in mind that I am a massive newbie</p>\n"
+    },
+    {
+      "tags": [
+        "python"
+      ],
+      "answers": [
+        {
+          "answer_id": 40639387,
+          "title": "How to play a sound in a &quot;Hello World&quot; Python program (kids class context)",
+          "body": "<p>First of all, after pygame.init() you need pygame.mixer.init().  Second of all, you can't just load files from anywhere.  For your program to load robot.wav, you either need to put robot.wav <strong>in the same directory as</strong> your program file, or you need to specify the entire path to robot.wav.  C:/MyPrograms/HelloWorld/robot.wav is an example of a file path, if you are using Windows.</p>\n\n<p>It is also possible that the sound file is corrupted or in the wrong format (e.g. not a wav file, even though it is named .wav).</p>\n\n<p>Refer to:</p>\n\n<p><a href=\"http://www.pygame.org/docs/ref/mixer.html\" rel=\"nofollow noreferrer\">http://www.pygame.org/docs/ref/mixer.html</a></p>\n\n<p><a href=\"http://www.pygame.org/docs/\" rel=\"nofollow noreferrer\">http://www.pygame.org/docs/</a></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 7168319,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/368174566907186/picture?type=large",
+        "display_name": "Luciana Louro",
+        "link": "http://stackoverflow.com/users/7168319/luciana-louro"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479320233,
+      "question_id": 40636607,
+      "title": "How to play a sound in a &quot;Hello World&quot; Python program (kids class context)",
+      "body": "<p>I'm trying to play a sound in a \"Hello World\" Python program for a children's class. I used the pygame library for that, but the program can't open the sound file. How can I fix this? </p>\n\n<pre><code> import pygame\n pygame.init()\n song = pygame.mixer.Sound('robot.wav')\n song.play()\n print (\"Hello, world!\")\n\n Error = song = pygame.mixer.Sound('robot.wav')\n pygame.error: Unable to open file 'robot.wav'\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "reactjs",
+        "redux",
+        "react-redux"
+      ],
+      "answers": [
+        {
+          "answer_id": 35531586,
+          "title": "redux-react simple hello world",
+          "body": "<p>You're assigning directly to \"state\" in your reducer, which is mutating it directly.  You need to return <code>Object.assign({}, state, {message:\"hello world\"});</code> instead.  </p>\n\n<p>Also note that React-Redux does a lot of work to make sure that a component's <code>mapStateToProps</code> function only runs when it absolutely has to.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 3468,
+        "user_id": 617027,
+        "user_type": "registered",
+        "accept_rate": 70,
+        "profile_image": "https://www.gravatar.com/avatar/e15f36cd65529f45542b16a6e1a339cd?s=128&d=identicon&r=PG",
+        "display_name": "Tom",
+        "link": "http://stackoverflow.com/users/617027/tom"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479268274,
+      "question_id": 35531443,
+      "title": "redux-react simple hello world",
+      "body": "<p>I am new to redux - why doesn't <code>mapStateToProps</code> get called and the component update to show 'hello world'?</p>\n\n<p><a href=\"http://codepen.io/anon/pen/QyXyvW?editors=0011\" rel=\"nofollow\">http://codepen.io/anon/pen/QyXyvW?editors=0011</a></p>\n\n<pre><code>const helloReducer = (state= {message:'none'}, action) =&gt; {    \n switch (action.type) {\n    case 'HELLO':\n      return Object.assign(state,{message:\"hello world\"});\n    default:\n      return state;\n  }  \n};\nconst myApp = Redux.combineReducers({\n  helloReducer\n});    \nconst App = ({onClick,message}) =&gt; (\n  &lt;div&gt;\n    &lt;a href=\"#\" onClick={onClick}&gt;click&lt;/a&gt;&lt;b&gt;{message}&lt;/b&gt;\n  &lt;/div&gt;\n);\nconst mapStateToProps = (state, ownProps) =&gt; {\n  return {message: state.message}\n};\nconst mapDispatchToProps = (dispatch, ownProps) =&gt; {\n  return {\n    onClick: () =&gt; {\n      dispatch({type: 'HELLO'})\n    }\n  }\n}   \nconst ConnectedApp = ReactRedux.connect(\n  mapStateToProps,\n  mapDispatchToProps\n)(App);\nlet Provider = ReactRedux.Provider;\nlet store = Redux.createStore(myApp)\nlet e = React.render(\n  &lt;Provider store={store}&gt;\n    &lt;ConnectedApp /&gt;\n  &lt;/Provider&gt;,\n  document.getElementById('root')\n);\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "jsp",
+        "netbeans",
+        "glassfish"
+      ],
+      "answers": [
+        {
+          "answer_id": 40594761,
+          "title": "Unable to run a simple &quot;Hello World!&quot; project using NetBeans IDE 8.1, Glassfish 4.1",
+          "body": "<p>Your code dosen´t really matter. It´s the redirection as mentioned in the error message that is not present. Notice that redirect is only browser side, if you want to do it on server side you need to use forward.  </p>\n\n<pre><code>RequestDispatcher rd = request.getRequestDispatcher(\"your file.js\");\nrd.forward(request, response);\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 6613721,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/986e9836819f40b4cedc747054986564?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Koushik C",
+        "link": "http://stackoverflow.com/users/6613721/koushik-c"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479158134,
+      "question_id": 38566081,
+      "title": "Unable to run a simple &quot;Hello World!&quot; project using NetBeans IDE 8.1, Glassfish 4.1",
+      "body": "<p>I am a beginner in Spring. Trying to run a simple \"Hello World!\" project using NetBeans IDE 8.1, Glassfish 4.1</p>\n\n<p>Here is my code:</p>\n\n<p>web.xml</p>\n\n<pre><code>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n\n&lt;context-param&gt;\n    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;\n    &lt;param-value&gt;/WEB-INF/applicationContext.xml&lt;/param-value&gt;\n&lt;/context-param&gt;\n&lt;listener&gt;\n    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;\n&lt;/listener&gt;\n&lt;servlet&gt;\n    &lt;servlet-name&gt;tryspring&lt;/servlet-name&gt;\n    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;\n    &lt;load-on-startup&gt;2&lt;/load-on-startup&gt;\n&lt;/servlet&gt;\n&lt;servlet-mapping&gt;\n    &lt;servlet-name&gt;tryspring&lt;/servlet-name&gt;\n    &lt;url-pattern&gt;*.jsp&lt;/url-pattern&gt;\n&lt;/servlet-mapping&gt;\n&lt;session-config&gt;\n    &lt;session-timeout&gt;\n        30\n    &lt;/session-timeout&gt;\n&lt;/session-config&gt;\n&lt;welcome-file-list&gt;\n    &lt;welcome-file&gt;redirect.jsp&lt;/welcome-file&gt;\n&lt;/welcome-file-list&gt;\n</code></pre>\n\n<p></p>\n\n<p>servlet.xml</p>\n\n<pre><code>&lt;?xml version='1.0' encoding='UTF-8' ?&gt;\n\n&lt;bean class=\"org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping\"/&gt;\n\n&lt;!--\nMost controllers will use the ControllerClassNameHandlerMapping above, but\nfor the index controller we are using ParameterizableViewController, so we must\ndefine an explicit mapping for it.\n--&gt;\n&lt;bean id=\"urlMapping\" class=\"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping\"&gt;\n    &lt;property name=\"mappings\"&gt;\n        &lt;props&gt;\n            &lt;prop key=\"index.jsp\"&gt;indexController&lt;/prop&gt;\n        &lt;/props&gt;\n    &lt;/property&gt;\n&lt;/bean&gt;\n\n&lt;bean id=\"viewResolver\"\n      class=\"org.springframework.web.servlet.view.InternalResourceViewResolver\"\n      p:prefix=\"/WEB-INF/jsp/\"\n      p:suffix=\".jsp\" /&gt;\n\n&lt;!--\nThe index controller.\n--&gt;\n&lt;bean name=\"indexController\"\n      class=\"org.springframework.web.servlet.mvc.ParameterizableViewController\"\n      p:viewName=\"index\" /&gt;\n</code></pre>\n\n<p></p>\n\n<p>index.jsp</p>\n\n<p>\n    </p>\n\n<pre><code>&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;p&gt;Hello! This is the default welcome page for a Spring Web MVC project.&lt;/p&gt;\n    &lt;p&gt;&lt;i&gt;To display a different welcome page for this project, modify&lt;/i&gt;\n        &lt;tt&gt;index.jsp&lt;/tt&gt; &lt;i&gt;, or create your own welcome page then change\n            the redirection in&lt;/i&gt; &lt;tt&gt;redirect.jsp&lt;/tt&gt; &lt;i&gt;to point to the new\n            welcome page and also update the welcome-file setting in&lt;/i&gt;\n        &lt;tt&gt;web.xml&lt;/tt&gt;.&lt;/p&gt;\n&lt;/body&gt;\n</code></pre>\n\n<p></p>\n\n<p>But when I am running the project no page is being displayed.</p>\n\n<pre><code>Error: \"HTTP Status 404 - Not Found\"\n</code></pre>\n\n<p>Can any one please help on this?</p>\n\n<p>Also this code is generated by NetBeans IDE.<br>\nI have just modified the dispatcher modifier from <code>*.htm</code> to <code>*.jsp</code>. Is it causing the problem?</p>\n"
+    },
+    {
+      "tags": [
+        "ruby",
+        "bash",
+        "command-line-interface",
+        "minitest"
+      ],
+      "answers": [
+        {
+          "answer_id": 40578678,
+          "title": "Hello world minitest cli example",
+          "body": "<p>You can run minitest tests just like ruby files. Just install minitest, write a test, and run like you would a ruby script:</p>\n\n<p>install minitest:</p>\n\n<pre><code>➜  ~/D/w/t/hello-minitest  gem install minitest\nSuccessfully installed minitest-5.9.1\nParsing documentation for minitest-5.9.1\nDone installing documentation for minitest after 0 seconds\n1 gem installed\n➜  ~/D/w/t/hello-minitest  tree .\n.\n├── app.rb\n├── foo.rb\n└── test\n    └── test_foo.rb\n</code></pre>\n\n<p>write test:</p>\n\n<pre><code>➜  ~/D/w/t/hello-minitest  cat test/test_foo.rb\nrequire 'minitest/autorun'\nrequire_relative '../foo.rb'\n\nclass TestFoo &lt; Minitest::Test\n  def test_it_works\n    assert_equal 1, 1\n  end\n\n  def test_bar\n    assert_equal Foo.new.bar, \"Hello world!\"\n  end\nend\n</code></pre>\n\n<p>run test like ruby script:</p>\n\n<pre><code>➜  ~/D/w/t/hello-minitest  ruby test/test_foo.rb\nRun options: --seed 56777\n\n# Running:\n\n\"Hello world!\"\n..\n\nFinished in 0.001085s, 1843.3179 runs/s, 1843.3179 assertions/s.\n\n2 runs, 2 assertions, 0 failures, 0 errors, 0 skips\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 378,
+        "user_id": 2909897,
+        "user_type": "registered",
+        "accept_rate": 82,
+        "profile_image": "https://i.stack.imgur.com/lHXgk.png?s=128&g=1",
+        "display_name": "mbigras",
+        "link": "http://stackoverflow.com/users/2909897/mbigras"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479070305,
+      "question_id": 40497676,
+      "title": "Hello world minitest cli example",
+      "body": "<p>Given the following directory structure:</p>\n\n<pre><code>➜  ~/D/w/t/foo  tree .\n.\n├── app.rb\n├── foo.rb\n└── test\n    └── test_foo.rb\n\n1 directory, 3 files\n</code></pre>\n\n<p>If I run <code>app.rb</code> I get the classic \"Hello world!\" response.</p>\n\n<pre><code>➜  ~/D/w/t/foo  ruby app.rb\n\"Hello world!\"\n</code></pre>\n\n<p>Taking a look inside <code>app.rb</code> and <code>foo.rb</code>:</p>\n\n<pre><code>➜  ~/D/w/t/foo  cat app.rb\nrequire_relative 'foo.rb'\n\nFoo.new.bar\n\n➜  ~/D/w/t/foo  cat foo.rb\nclass Foo\n  def bar\n    p \"Hello world!\"\n  end\nend\n</code></pre>\n\n<p>How would I would I test my <code>Foo</code> class with minitest from the commandline?</p>\n\n<p>I know that it has something to do with the <code>ruby -Ilib</code> command but I'm not sure what the exact switches and flags are, and also I'm not sure what to put inside of <code>test_foo.rb</code>. I'm also not sure if my directory stucture is set up right. Maybe <code>foo.rb</code> needs to go inside of a <code>lib</code> directory?</p>\n\n<p>Would love you guidance :)</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "string",
+        "file",
+        "text"
+      ],
+      "answers": [
+        {
+          "answer_id": 40577811,
+          "title": "how do i read a string from a file up to a set character (for example reading the words &quot;hello world &#172; this is a string&quot; up to the&#172;) in python 3",
+          "body": "<p>I would use split:    </p>\n\n<pre><code>s = 'znPbB t7&lt;)!\\oWk_feGTIT:7{.¬ZO9?S9$v9vpd}Z#EMKC¬'\ns.split('¬')\n# returns\n['znPbB t7&lt;)!\\\\oWk_feGTIT:7{.', 'ZO9?S9$v9vpd}Z#EMKC', '']\n</code></pre>\n"
+        },
+        {
+          "answer_id": 40578069,
+          "title": "how do i read a string from a file up to a set character (for example reading the words &quot;hello world &#172; this is a string&quot; up to the&#172;) in python 3",
+          "body": "<p>One solution is to split the string. Another is to use the <code>re</code> module. I changed the ¬ character to an ö when testing:</p>\n\n<pre><code>import re\n\ntext = 'znPbB t7&lt;)!\\oWk_feGTIT:7{.öZO9?S9$v9vpd}Z#EMKCöjndIJ%349HBhslö'\nregex_result = re.findall(r\"(?!ö).*?(?=ö)\", text)\nsplit_result = text.split(\"ö\")\n</code></pre>\n\n<p>The difference between the results of the two is that <code>str.split</code> includes an empty string if the character (in my example \"ö\") is last. </p>\n\n<pre><code>split_result[:-1] == regex_result # &lt;--- This is True\n</code></pre>\n\n<p>The regular expression can be divided into three parts. <code>(?!ö)</code> is a negative lookahead which excludes \"ö\" from the results. <code>.*?</code> matches anything. <code>(?=ö)</code> is a lookahead which tells us that \"ö\" is needed but not to be included in the match. </p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 3,
+        "user_id": 7153704,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/46e0de4f83bbc0726e4d788b950233d7?s=128&d=identicon&r=PG&f=1",
+        "display_name": "1234USSR4321",
+        "link": "http://stackoverflow.com/users/7153704/1234ussr4321"
+      },
+      "answer_count": 2,
+      "last_activity_date": 1479066229,
+      "question_id": 40577729,
+      "title": "how do i read a string from a file up to a set character (for example reading the words &quot;hello world &#172; this is a string&quot; up to the&#172;) in python 3",
+      "body": "<p>sorry if my English is off, i am making something in python and need help with fixing a problem i have encountered. the problem im having is i need to be able to take information in a txt file up to a point signalled by a key character such as ¬, and then need to be able to take the next part of the string after the 1st ¬ to the next ¬ and so on. the reason for this is because all the strings will be of various lengths that can and will change, so if i have the string</p>\n\n<p>'znPbB t7&lt;)!\\oWk_feGTIT:7{.¬ZO9?S9$v9vpd}Z#EMKC¬'</p>\n\n<p>in a note pad file i need it to come out as </p>\n\n<p>'znPbB t7&lt;)!\\oWk_feGTIT:7{.' </p>\n\n<p>and when i want the 2nd one, it should come out as</p>\n\n<p>'ZO9?S9$v9vpd}Z#EMKC'</p>\n"
+    },
+    {
+      "tags": [
+        "c++"
+      ],
+      "answers": [
+        {
+          "answer_id": 29159569,
+          "title": "Running a hello world HElib program",
+          "body": "<p>Ah, so this is a misunderstanding of the operations being performed.  Notice the constant <code>p=2</code>.  I have the text <code>All computations are modulo 2.</code>.  Perhaps also stating <code>All inputs are modulo 2</code> would help hammer the point home.  Lets look at some of our computations:</p>\n\n<pre><code>0 + 0 mod 2 = 0\n2 + 3 mod 2 = 1\n4 + 6 mod 2 = 0\n6 + 9 mod 2 = 1\n</code></pre>\n\n<p>All looks good - addition ring 2 is just exclusive OR.  How about multiplication?  In ring 2 (binary) that's just AND:</p>\n\n<pre><code>0 * 0 = 0\n2 * 3 = 6 mod 2 = 0\n4 * 6 = 24 mod 2 = 0\n6 * 9 = 54 mod 2 = 0\n</code></pre>\n\n<p>So that all checks out as well.  Finally, look back at the blog and see that I called this out again and give you a way to operate on something you might consider more pleasing:</p>\n\n<blockquote>\n  <p>In this case, I am building for GF(2) - so my homormorphic addition\n  is XOR and multiplication is AND. Changing this is as easy as changing\n  the value of p. Folks wanting to see 2+2=4 should set p to something\n  that matches their desired domain, such as 257 to obtain 8 bit Ints.</p>\n</blockquote>\n\n<p>However, HELib has regressed in this aspect - setting <code>p</code> equal to anything larger than <code>2</code> did not work last time I tried it.  Shai confirmed this is a known regression.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1180,
+        "user_id": 1052943,
+        "user_type": "registered",
+        "accept_rate": 70,
+        "profile_image": "https://www.gravatar.com/avatar/28df40e83cb8d362c0fb147ced47a974?s=128&d=identicon&r=PG",
+        "display_name": "jeremyvillalobos",
+        "link": "http://stackoverflow.com/users/1052943/jeremyvillalobos"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479064449,
+      "question_id": 29155219,
+      "title": "Running a hello world HElib program",
+      "body": "<p>After going over this tutorial </p>\n\n<p><a href=\"http://tommd.github.io/\" rel=\"nofollow\">http://tommd.github.io/</a></p>\n\n<p>which uses the HElib library:\n<a href=\"https://github.com/shaih/HElib\" rel=\"nofollow\">https://github.com/shaih/HElib</a></p>\n\n<p>I get the following output:</p>\n\n<p>The output is getting corrupted.  Given that the example has Level 16, there should be plenty of room to perform these operations.</p>\n\n<p>Is there a problem with the parameters ?</p>\n\n<p>Code:</p>\n\n<pre><code>#include \"FHE.h\"\n#include \"EncryptedArray.h\"\n#include &lt;NTL/lzz_pXFactoring.h&gt;\n#include &lt;fstream&gt;\n#include &lt;sstream&gt;\n#include &lt;sys/time.h&gt;\n\nusing namespace std;\n/**\n *\n */\nint main(int argc, char** argv) {\n\n     /* On our trusted system we generate a new key\n     * (or read one in) and encrypt the secret data set.\n     */\n\n    long m=0, p=2, r=1; // Native plaintext space\n                        // Computations will be 'modulo p'\n    long L=16;          // Levels\n    long c=3;           // Columns in key switching matrix\n    long w=64;          // Hamming weight of secret key\n    long d=0;\n    long security = 128;\n    ZZX G;\n    m = FindM(security,L,c,p, d, 0, 0);\n\n    FHEcontext context(m, p, r);\n    // initialize context\n    buildModChain(context, L, c);\n    // modify the context, adding primes to the modulus chain\n    FHESecKey secretKey(context);\n    // construct a secret key structure\n    const FHEPubKey&amp; publicKey = secretKey;\n    // an \"upcast\": FHESecKey is a subclass of FHEPubKey\n\n    //if(0 == d)\n    G = context.alMod.getFactorsOverZZ()[0];\n\n   secretKey.GenSecKey(w);\n   // actually generate a secret key with Hamming weight w\n\n   addSome1DMatrices(secretKey);\n   cout &lt;&lt; \"Generated key\" &lt;&lt; endl;\n\n\n   EncryptedArray ea(context, G);\n   // constuct an Encrypted array object ea that is\n   // associated with the given context and the polynomial G\n\n   long nslots = ea.size();\n\n   vector&lt;long&gt; v1;\n   for(int i = 0 ; i &lt; nslots; i++) {\n       v1.push_back(i*2);\n   }\n   Ctxt ct1(publicKey);\n   ea.encrypt(ct1, publicKey, v1);\n\n   vector&lt;long&gt; v2;\n   Ctxt ct2(publicKey);\n   for(int i = 0 ; i &lt; nslots; i++) {\n       v2.push_back(i*3);\n   }\n   ea.encrypt(ct2, publicKey, v2);\n\n     // On the public (untrusted) system we\n   // can now perform our computation\n\n   Ctxt ctSum = ct1;\n   Ctxt ctProd = ct1;\n\n   ctSum += ct2;\n   ctProd *= ct2;\n\n\n     vector&lt;long&gt; res;\n    ea.decrypt(ctSum, secretKey, res);\n\n    cout &lt;&lt; \"All computations are modulo \" &lt;&lt; p &lt;&lt; \".\" &lt;&lt; endl;\n    for(int i = 0; i &lt; res.size(); i ++) {\n        cout &lt;&lt; v1[i] &lt;&lt; \" + \" &lt;&lt; v2[i] &lt;&lt; \" = \" &lt;&lt; res[i] &lt;&lt; endl;\n    }\n\n    ea.decrypt(ctProd, secretKey, res);\n    for(int i = 0; i &lt; res.size(); i ++) {\n        cout &lt;&lt; v1[i] &lt;&lt; \" * \" &lt;&lt; v2[i] &lt;&lt; \" = \" &lt;&lt; res[i] &lt;&lt; endl;\n    }\n\n    return 0;\n}\n</code></pre>\n\n<p>Generated key<br>\nAll computations are modulo 2.   </p>\n\n<p>0 + 0 = 0<br>\n2 + 3 = 1<br>\n4 + 6 = 0<br>\n6 + 9 = 1<br>\n8 + 12 = 0<br>\n10 + 15 = 1<br>\n12 + 18 = 0<br>\n14 + 21 = 1<br>\n16 + 24 = 0<br>\n18 + 27 = 1<br>\n20 + 30 = 0<br>\n22 + 33 = 1<br>\n24 + 36 = 0<br>\n26 + 39 = 1<br>\n28 + 42 = 0<br>\n30 + 45 = 1<br>\n32 + 48 = 0<br>\n34 + 51 = 1<br>\n36 + 54 = 0<br>\n38 + 57 = 1<br>\n40 + 60 = 0<br>\n42 + 63 = 1<br>\n44 + 66 = 0<br>\n46 + 69 = 1<br>\n48 + 72 = 0<br>\n50 + 75 = 1<br>\n52 + 78 = 0<br>\n54 + 81 = 1<br>\n56 + 84 = 0<br>\n58 + 87 = 1<br>\n60 + 90 = 0                                                                                                                                                                      </p>\n\n<p>... Some sum output omitted </p>\n\n<p>0 * 0 = 0\n2 * 3 = 0\n4 * 6 = 0\n6 * 9 = 0\n8 * 12 = 0\n10 * 15 = 0\n12 * 18 = 0\n14 * 21 = 0\n16 * 24 = 0\n18 * 27 = 0\n20 * 30 = 0\n22 * 33 = 0\n24 * 36 = 0\n26 * 39 = 0\n28 * 42 = 0\n30 * 45 = 0\n32 * 48 = 0\n34 * 51 = 0\n36 * 54 = 0\n38 * 57 = 0\n40 * 60 = 0\n42 * 63 = 0\n44 * 66 = 0\n46 * 69 = 0\n48 * 72 = 0\n50 * 75 = 0\n52 * 78 = 0\n54 * 81 = 0\n56 * 84 = 0\n58 * 87 = 0\n60 * 90 = 0\n62 * 93 = 0\n64 * 96 = 0\n66 * 99 = 0\n68 * 102 = 0\n70 * 105 = 0\n72 * 108 = 0\n74 * 111 = 0\n76 * 114 = 0\n78 * 117 = 0\n80 * 120 = 0\n82 * 123 = 0\n84 * 126 = 0\n86 * 129 = 0</p>\n\n<p>....</p>\n"
+    },
+    {
+      "tags": [
+        "angularjs",
+        "node.js",
+        "mean-stack",
+        "mean.io"
+      ],
+      "answers": [
+        {
+          "answer_id": 36808820,
+          "title": "How to run a simple hello world application using mean.io",
+          "body": "<p>Whether you are new to mean.io stack or an experienced user, this tutorial series will help you learn how to use mean.io</p>\n\n<p>through them you will develop an application that will allow us to manage our goals:</p>\n\n<ol>\n<li><a href=\"https://codewithintent.com/mean-io-tutorial-building-goals-application-from-scratch-part-1/\" rel=\"nofollow\">Part-1</a></li>\n<li><a href=\"https://codewithintent.com/mean-io-tutorial-building-goals-application-from-scratch-part-2/\" rel=\"nofollow\">Part-2</a></li>\n<li><a href=\"https://codewithintent.com/mean-io-tutorial-building-goals-application-from-scratch-part-3/\" rel=\"nofollow\">Part-3</a></li>\n<li><a href=\"https://codewithintent.com/mean-io-tutorial-building-a-goals-application-from-scratch-part-4/\" rel=\"nofollow\">Part-4</a></li>\n<li><a href=\"https://codewithintent.com/mean-io-tutorial-part-5-integrating-ghost-with-mean/\" rel=\"nofollow\">Part-5</a></li>\n</ol>\n"
+        },
+        {
+          "answer_id": 36808841,
+          "title": "How to run a simple hello world application using mean.io",
+          "body": "<p>A good starting point is using <a href=\"https://bitnami.com/stack/mean\" rel=\"nofollow\">Bitnami MEAN</a>. Gives you an environment where you can start with. </p>\n"
+        },
+        {
+          "answer_id": 40577239,
+          "title": "How to run a simple hello world application using mean.io",
+          "body": "<p>I'm the creator of the full-stack scaffolding framework.</p>\n\n<p>It's a scaffolding framework that gets you started with the MEAN Stack with one quick command.</p>\n\n<pre><code>sudo npm install full-stack -g\nfull-stack init myProject\n</code></pre>\n\n<p>You can learn more about the tool here: <a href=\"https://www.meanstack.net/\" rel=\"nofollow noreferrer\">https://www.meanstack.net/</a></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 2554,
+        "user_id": 3127499,
+        "user_type": "registered",
+        "accept_rate": 63,
+        "profile_image": "https://www.gravatar.com/avatar/ede903e06e509bc0dfff01b6c8b159bd?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Sachin Divakar",
+        "link": "http://stackoverflow.com/users/3127499/sachin-divakar"
+      },
+      "answer_count": 3,
+      "last_activity_date": 1479061447,
+      "question_id": 36547409,
+      "title": "How to run a simple hello world application using mean.io",
+      "body": "<p>I am new (few hours into it)to mean stack development.I was starting up with documentation in mean.io website .Here I am confused how / where to run helloworld.js from?\nlocalhost:3000 gives mean home page\nI have just a static html page with alert box showing hello world \nhow to run this ??\nFor Example in case of wamp inside of www folder .So from where or how a application can be run?</p>\n"
+    },
+    {
+      "tags": [
+        "asp.net-core",
+        ".net-core"
+      ],
+      "answers": [
+        {
+          "answer_id": 40571218,
+          "title": "Asp.net core hello world on ubuntu 16.04",
+          "body": "<p>Update project.json to include </p>\n\n<pre><code>\"dependencies\": {\n    \"Microsoft.AspNetCore.Server.Kestrel\": \"1.0.0\",\n        \"Microsoft.AspNetCore.Hosting\": \"1.0.0\",\n        \"Microsoft.AspNetCore.Http\": \"1.0.0\"\n},\n</code></pre>\n\n<p>Remember to run <code>dotnet restore</code> afterwards.</p>\n\n<p>Ensure that the classes below have at least the following using statements:</p>\n\n<p>Program.cs</p>\n\n<pre><code>using Microsoft.AspNetCore.Hosting;\n</code></pre>\n\n<p>Startup.cs</p>\n\n<pre><code>using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Http;\n</code></pre>\n\n<p>Also, for the site to be accessible outside of localhost, modify Program.cs call to WebHostBuilder to include <code>.UseUrls()</code></p>\n\n<pre><code>var host = new WebHostBuilder()\n                    .UseKestrel()\n                    .UseUrls(\"http://0.0.0.0:5000\")\n                    .UseStartup&lt;Startup&gt;()\n                    .Build();\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 15,
+        "user_id": 1741362,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/652931d8b783a5ea4e2733a846a2b0f8?s=128&d=identicon&r=PG",
+        "display_name": "cee_el",
+        "link": "http://stackoverflow.com/users/1741362/cee-el"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479055952,
+      "question_id": 40563856,
+      "title": "Asp.net core hello world on ubuntu 16.04",
+      "body": "<p>When attempting to follow this tutorial instructions: <a href=\"https://docs.microsoft.com/en-us/aspnet/core/getting-started\" rel=\"nofollow noreferrer\">https://docs.microsoft.com/en-us/aspnet/core/getting-started</a></p>\n\n<p>I first got a missing reference issue for Microsoft.AspNetCore.Hosting and Microsoft.AspNetCore.Http, which I fixed by adding</p>\n\n<p>\"Microsoft.AspNetCore.Hosting\": \"1.0.0\",\n\"Microsoft.AspNetCore.Http\": \"1.0.0\"</p>\n\n<p>under dependencies in project.json</p>\n\n<p>But I still get the following issue:</p>\n\n<p>error CS1061: 'WebHostBuilder' does not contain a definition for 'UseKestrel' and no extension method 'UseKestrel' accepting a first argument of type 'WebHostBuilder' could be found (are you missing a using directive or an assembly reference?)</p>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "linux",
+        "gcc",
+        "ld",
+        "alpine"
+      ],
+      "answers": [
+        {
+          "answer_id": 40574830,
+          "title": "How to compile a 32bit hello world on alpine?",
+          "body": "<p>According to <code>gcc -v</code> on alpine gcc is compiled without multilib support:</p>\n\n<pre><code>--disable-multilib\n</code></pre>\n\n<p>While multilib is enabled on debian:</p>\n\n<pre><code>--with-multilib-list=m32,m64,mx32 --enable-multilib\n</code></pre>\n\n<p>Multilib support is required for the <code>-m32</code> to work reliable. Therefore the default compiler on alpine is really not suited for compiling 32bit binaries.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 11939,
+        "user_id": 1870481,
+        "user_type": "registered",
+        "accept_rate": 59,
+        "profile_image": "https://www.gravatar.com/avatar/478e3c60bf48e069b2f79bddd202d600?s=128&d=identicon&r=PG",
+        "display_name": "michas",
+        "link": "http://stackoverflow.com/users/1870481/michas"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1479046700,
+      "question_id": 40539592,
+      "title": "How to compile a 32bit hello world on alpine?",
+      "body": "<p>Given a simple hello world code:</p>\n\n<pre><code>#include &lt;stdio.h&gt;\nint main(void){\n  puts(\"hello\");\n  return 0;\n}\n</code></pre>\n\n<p>On a 64bit alpine linux installation I tried to compile it as 64bit and as 32bit.\nThe first works fine, but the second is missing 32bit libraries:</p>\n\n<pre><code>~ # gcc -Wall hello.c \n~ # gcc -Wall -m32 hello.c \n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../libssp_nonshared.a when searching for -lssp_nonshared\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible //usr/lib/libssp_nonshared.a when searching for -lssp_nonshared\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lssp_nonshared\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/libgcc.a when searching for -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../libgcc_s.so when searching for -lgcc_s\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible //usr/lib/libgcc_s.so when searching for -lgcc_s\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lgcc_s\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../libc.so when searching for -lc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../libc.a when searching for -lc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible //usr/lib/libc.so when searching for -lc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible //usr/lib/libc.a when searching for -lc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/libgcc.a when searching for -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../libgcc_s.so when searching for -lgcc_s\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible //usr/lib/libgcc_s.so when searching for -lgcc_s\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lgcc_s\ncollect2: error: ld returned 1 exit status\n</code></pre>\n\n<p>Because I found no obvious way to fix this, I fetched the 32bit version of gcc, libgcc, and musl-dev extracted to a local directory and set LIBRARY_PATH:</p>\n\n<pre><code>~ # LIBRARY_PATH=usr/lib/gcc/i586-alpine-linux-musl/5.3.0:usr/lib gcc -Wall -m32 hello.c \n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/libgcc.a when searching for -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/libgcc.a when searching for -lgcc\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: i386:x86-64 architecture of input file `/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/crtbeginS.o' is incompatible with i386 output\n/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/bin/ld: i386:x86-64 architecture of input file `/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/crtendS.o' is incompatible with i386 output\ncollect2: error: ld returned 1 exit status\n~ # \n</code></pre>\n\n<p>This partly fixed the issues, but gcc still tries the 64bit libraries first and finds tries to find the 64bit crt files.</p>\n\n<p>So what is the correct way to compile a 32bit binary on alpine linux?</p>\n\n<hr>\n\n<p>To make the last problem more clear, look at this:</p>\n\n<pre><code>~ # LIBRARY_PATH=/tmp gcc --verbose -Wall -m32 hello.c 2&gt;&amp;1|grep LIBRARY_PATH\nLIBRARY_PATH=/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/:/tmp/:/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../../x86_64-alpine-linux-musl/lib/:/usr/lib/gcc/x86_64-alpine-linux-musl/5.3.0/../../../:/lib/:/usr/lib/\n</code></pre>\n\n<p>If I only set some LIBRARY_PATH, the compiler internally adds other directories to it. Especially it also prepends the \"wrong\" system directory, which contains the 64bit libraries. Therefore it uses the wrong crt libs and therefore the last error above.</p>\n\n<p>I either need the correct alpine package (and not care about how it works), or I need to understand how to change that first path added internally by gcc.</p>\n"
+    },
+    {
+      "tags": [
+        "kotlin",
+        "tornadofx"
+      ],
+      "answers": [
+        {
+          "answer_id": 40553787,
+          "title": "How to run tornado fx hello world with java 7",
+          "body": "<p>I believe TornadoFX requires a minimum of Java 8 to work. It needs the JavaFX in the Java 8 standard library. </p>\n"
+        },
+        {
+          "answer_id": 40561667,
+          "title": "How to run tornado fx hello world with java 7",
+          "body": "<p>To run a TornadoFX application use an \"Application\" configuration in IDE. More on that in the docs: <a href=\"https://github.com/edvin/tornadofx/wiki/Application-Startup\" rel=\"nofollow noreferrer\">https://github.com/edvin/tornadofx/wiki/Application-Startup</a></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1019,
+        "user_id": 1165499,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://www.gravatar.com/avatar/64bccb96953928310e2b9056c75dffb5?s=128&d=identicon&r=PG&f=1",
+        "display_name": "ashur",
+        "link": "http://stackoverflow.com/users/1165499/ashur"
+      },
+      "answer_count": 2,
+      "last_activity_date": 1478944702,
+      "question_id": 40551886,
+      "title": "How to run tornado fx hello world with java 7",
+      "body": "<p>I've been trying to run the following example from youtube with no success, first it couldn't load javafx on class path so I added it manually, but right now it says that it can't find <code>main</code> method beside fact, that author could run it without main method. </p>\n\n<p>Also, installing tornado fx plugin and creating project from template throws the same error.</p>\n\n<p>I believe it is related to java 7 and no usage of javafx package tool.</p>\n\n<p><strong>LoginScreen.kt</strong></p>\n\n<pre><code>class LoginScreen : View() {\n    override  val root = VBox()\n\n    init {\n        with (root) {\n            hbox {\n                label(\"Username\")\n                textfield()\n            }\n\n            hbox {\n                label(\"Password\")\n                passwordfield()\n            }\n\n            hbox {\n                button(\"Login\")\n            }\n        }\n    }\n}\n</code></pre>\n\n<p><strong>MyApp.kt</strong></p>\n\n<pre><code>class MyApp : App() {\n    override val primaryView = LoginScreen::class\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "cordova"
+      ],
+      "owner": {
+        "reputation": 514,
+        "user_id": 4983589,
+        "user_type": "registered",
+        "accept_rate": 71,
+        "profile_image": "https://www.gravatar.com/avatar/610eb31d22385e4687f5f50636ed904e?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Beginnerprogrammer",
+        "link": "http://stackoverflow.com/users/4983589/beginnerprogrammer"
+      },
+      "answer_count": 0,
+      "last_activity_date": 1478916125,
+      "question_id": 40558632,
+      "title": "Cordova hello world app",
+      "body": "<p>I wanted to create an cordova hello world application but when i run <code>cordova run android</code> it throws me this error: </p>\n\n<pre><code>Error: cmd: Command failed with exit code 1 Error output:\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nA problem occurred configuring root project 'android'.\n&gt; You have not accepted the license agreements of the following SDK components:\n[Android SDK Platform 24].\nBefore building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.\nAlternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html\n\n* Try:\nRun with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.\n</code></pre>\n\n<p>I saw that I had to implement the licenses in this HelloWorld application, but with no result!</p>\n\n<p>This is what I also tried the root folder of this project: </p>\n\n<pre><code>mkdir \"$ANDROID_SDK/licenses\"\"|| true\n\necho y | android update sdk --no-ui --all --filter extra-android-support | grep 'package installed'\n</code></pre>\n\n<p>Also tried to find the ANDROID_HOME folder but I don't have AppData folder in my <code>User\\Name\\</code> which I think is pretty weird</p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "eclipse",
+        "compiler-errors",
+        "mingw"
+      ],
+      "owner": {
+        "reputation": 123,
+        "user_id": 4621338,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://i.stack.imgur.com/pFCPe.png?s=128&g=1",
+        "display_name": "Kingbluesapphire",
+        "link": "http://stackoverflow.com/users/4621338/kingbluesapphire"
+      },
+      "answer_count": 0,
+      "last_activity_date": 1478906211,
+      "question_id": 40557119,
+      "title": "G++ Error with first Hello World project in C++",
+      "body": "<p>I am trying to get into C++ but when I try running the default Hello World project it gives out </p>\n\n<pre><code>\"Error: Program \"g++\" not found in PATH\" \n</code></pre>\n\n<p>I have installed MinGw and think I've added it to my Path</p>\n\n<p><a href=\"https://i.stack.imgur.com/C4qiz.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.stack.imgur.com/C4qiz.png\" alt=\"Eclipse\"></a></p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "html",
+        "angularjs",
+        "plunker"
+      ],
+      "answers": [
+        {
+          "answer_id": 31841810,
+          "title": "Why is this easier-than-hello-world angularjs application not working?",
+          "body": "<p>you'll need a controller to make it work.</p>\n\n<pre><code> &lt;body ng-app=\"AlsoAPP\"&gt;\n   &lt;div ng-controller=\"YourController\"&gt;\n     &lt;h1&gt;Hello Plunker!&lt;/h1&gt;\n      {{ 843 / 42 }}\n  &lt;/div&gt;\n&lt;/body&gt;\n</code></pre>\n\n<p>Editing cause i didn't saw that you were missing the app too.</p>\n"
+        },
+        {
+          "answer_id": 31864125,
+          "title": "Why is this easier-than-hello-world angularjs application not working?",
+          "body": "<p>I was listening to the same video and I had the same issue. I started by using the latest angular js file. </p>\n\n<p>I then tried to use the same <a href=\"https://code.angularjs.org/1.3.0-beta.5/angular.js\" rel=\"nofollow noreferrer\">Angular JS file</a> he was using and then it worked fine.</p>\n"
+        },
+        {
+          "answer_id": 40554175,
+          "title": "Why is this easier-than-hello-world angularjs application not working?",
+          "body": "<p>Just wanted to add the whole program for someone's help.</p>\n\n<pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n\n  &lt;head&gt;\n    &lt;script data-require=\"angular.js@1.3.0\" data-semver=\"1.3.0\"\n        src=\"https://code.angularjs.org/1.3.0-beta.5/angular.js\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\" /&gt;\n    &lt;script src=\"script.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n\n  &lt;body ng-app&gt;\n    {{ 8/4 }}\n  &lt;/body&gt;\n\n&lt;/html&gt;\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 346,
+        "user_id": 2057387,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://i.stack.imgur.com/mB2Xt.png?s=128&g=1",
+        "display_name": "xcdemon05",
+        "link": "http://stackoverflow.com/users/2057387/xcdemon05"
+      },
+      "answer_count": 3,
+      "last_activity_date": 1478893021,
+      "question_id": 31841750,
+      "title": "Why is this easier-than-hello-world angularjs application not working?",
+      "body": "<p>I'm following a pluralsight tutorial to learn angularjs, and I'm already stuck on the first video.</p>\n\n<p>The tutorial uses plunker, here is the <a href=\"http://plnkr.co/edit/ogmlEyLuzX3UBK65qgjk?p=preview\" rel=\"nofollow noreferrer\">link to my code</a></p>\n\n<pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n\n  &lt;head&gt;\n    &lt;script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\" /&gt;\n    &lt;script src=\"script.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n\n  &lt;body ng-app&gt;\n    &lt;h1&gt;Hello Plunker!&lt;/h1&gt;\n    {{ 843 / 42 }}\n  &lt;/body&gt;\n\n&lt;/html&gt;\n</code></pre>\n\n<p>I followed the instructions, clicked the button to add angularjs to my html doc (i.e. it just adds the link in the header and the ng-app to the body tag) but it is not working.  </p>\n\n<p>In the video, he types <code>{{ 843 / 42 }}</code> and it prints to the page 20.07.... whereas mine is just printing <code>{{ 843 / 42 }}</code>.</p>\n\n<p>I can't start learning about angularjs until I figure out why my code is not working, but I can't figure out why my code is not working until I learn more about angularjs...   </p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "node.js",
+        "sharepoint",
+        "typescript",
+        "aurelia"
+      ],
+      "answers": [
+        {
+          "answer_id": 40541333,
+          "title": "Aurelia app &quot;Hello World&quot; not working at all",
+          "body": "<p>Without specifying an attribute to the <code>aurelia-app</code>, it loads by default <code>app.html</code> and <code>app.js</code>. So what you'd want to do is change it to:</p>\n\n<pre><code>&lt;div aurelia-app=\"main\"&gt;\n</code></pre>\n\n<p>So that loads <code>main.js</code> and actually starts aurelia.</p>\n\n<p><a href=\"http://aurelia.io/hub.html#/doc/article/aurelia/framework/latest/app-configuration-and-startup/1\" rel=\"nofollow noreferrer\">Here's a link to the documentation</a> about bootstrapping aurelia.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 5874,
+        "user_id": 1014217,
+        "user_type": "registered",
+        "accept_rate": 98,
+        "profile_image": "https://www.gravatar.com/avatar/23eb304fcf13f751061e8fa701383800?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Luis Valencia - MVP",
+        "link": "http://stackoverflow.com/users/1014217/luis-valencia-mvp"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1478842076,
+      "question_id": 40441785,
+      "title": "Aurelia app &quot;Hello World&quot; not working at all",
+      "body": "<p>I am creating a Sharepoint framework webpart, and I am trying to use Aurelia as my JavaScript framework.</p>\n\n<p>Basically I created a Sharepoint framework webpart, which when created with Yeoman, creates this <a href=\"https://i.stack.imgur.com/jOW2b.png\" rel=\"nofollow noreferrer\">folder structure</a>.</p>\n\n<p>Then my files (just a simple hello world):</p>\n\n<p>app.html</p>\n\n<pre><code>&lt;template&gt;\n  ${message}\n&lt;/template&gt;\n</code></pre>\n\n<p>app.js</p>\n\n<pre><code>export class App {\n  message = 'hello world';\n}\n</code></pre>\n\n<p>main.ts</p>\n\n<pre><code>import {Aurelia} from 'aurelia-framework';\n\nexport function configure(aurelia) {\n  aurelia.use\n    .standardConfiguration()\n    .developmentLogging();\n\n  aurelia.start().then(a =&gt; a.setRoot());\n}\n</code></pre>\n\n<p>index.html</p>\n\n<pre><code> &lt;div aurelia-app&gt;\n    &lt;h1&gt;Loading...&lt;/h1&gt;\n    &lt;h2&gt; ftw &lt;/h2&gt;\n    &lt;script src=\"jspm_packages/system.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"config.js\"&gt;&lt;/script&gt;\n    &lt;script&gt;\n      System.import('aurelia-bootstrapper');\n    &lt;/script&gt;\n\n  &lt;/div&gt;\n</code></pre>\n\n<p>And the helloworld webpart:</p>\n\n<pre><code>import {\n  BaseClientSideWebPart,\n  IPropertyPaneSettings,\n  IWebPartContext,\n  PropertyPaneTextField\n} from '@microsoft/sp-client-preview';\n\nimport styles from './HelloWorld.module.scss';\nimport * as strings from 'helloWorldStrings';\nimport { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';\nimport { configure } from './main';\nimport * as systemjs from 'systemjs';\nimport {Aurelia} from 'aurelia-framework';\n\nexport default class HelloWorldWebPart extends BaseClientSideWebPart&lt;IHelloWorldWebPartProps&gt; {\n\n  public constructor(context: IWebPartContext) {\n    super(context);\n  }\n\n  public render(): void {\n    if (this.renderedOnce === false) {\n      this.domElement.innerHTML = require('./index.html');\n    }\n  }\n\n  protected get propertyPaneSettings(): IPropertyPaneSettings {\n    return {\n      pages: [\n        {\n          header: {\n            description: strings.PropertyPaneDescription\n          },\n          groups: [\n            {\n              groupName: strings.BasicGroupName,\n              groupFields: [\n                PropertyPaneTextField('description', {\n                  label: strings.DescriptionFieldLabel\n                })\n              ]\n            }\n          ]\n        }\n      ]\n    };\n  }\n}\n</code></pre>\n\n<p>The code renders the HTML in the page, but without the message.</p>\n\n<p>I don't see any error in the browser console.</p>\n\n<p>I installed Aurelia with NPM no jspm.  Executing <code>gulp serve</code> does not show any compilation error.</p>\n\n<p>I also created a typings file \"aurelia.d.ts\" in the typings subfolder.</p>\n\n<p>I think that my main problem is in the index.html, as it has a reference to 2 JavaScript files, but I am not sure how to reference them because they are inside the NPM modules folder and I don't think they are deployed when doing <code>gulp serve</code>.</p>\n\n<p>And by the way, here's my config.json:</p>\n\n<pre><code>{\n  \"entries\": [\n    {\n      \"entry\": \"./lib/webparts/helloWorld/HelloWorldWebPart.js\",\n      \"manifest\": \"./src/webparts/helloWorld/HelloWorldWebPart.manifest.json\",\n      \"outputPath\": \"./dist/hello-world.bundle.js\"\n    }\n  ],\n  \"externals\": {\n    \"@microsoft/sp-client-base\": \"node_modules/@microsoft/sp-client-base/dist/sp-client-base.js\",\n    \"@microsoft/sp-client-preview\": \"node_modules/@microsoft/sp-client-preview/dist/sp-client-preview.js\",\n    \"@microsoft/sp-lodash-subset\": \"node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js\",\n    \"office-ui-fabric-react\": \"node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js\",\n    \"react\": \"node_modules/react/dist/react.min.js\",\n    \"react-dom\": \"node_modules/react-dom/dist/react-dom.min.js\",\n    \"aurelia\": \"node_modules/aurelia-framework/dist/aurelia-framework.js\",\n    \"systemjs\" : \"node_modules/systemjs/dist/systemjs/system.js\"\n  },\n  \"localizedResources\": {\n    \"helloWorldStrings\": \"webparts/helloWorld/loc/{locale}.js\"\n  }\n}\n</code></pre>\n\n<p>Errors in the console:</p>\n\n<blockquote>\n  <p>FetchProvider.ts:30 GET\n  <a href=\"https://softwares-macbook-pro.local:4321/sites/workbench/_api/Microsoft.SharePoint.Portal.SuiteNavData.GetSuiteNavData?v=2&amp;Locale=undefined\" rel=\"nofollow noreferrer\">https://softwares-macbook-pro.local:4321/sites/workbench/_api/Microsoft.SharePoint.Portal.SuiteNavData.GetSuiteNavData?v=2&amp;Locale=undefined</a>\n  404 (Not Found)FetchProvider.fetch @\n  FetchProvider.ts:30BasicHttpClient.fetchCore @\n  BasicHttpClient.ts:68HttpClient._fetchWithInstrumentation @\n  HttpClient.ts:183HttpClient.fetch @ HttpClient.ts:141HttpClient.get @\n  HttpClient.ts:154OnPremSuiteNavDataSource.loadData @\n  OnPremSuiteNavDataSource.ts:42SuiteNavManager._loadSuiteNavFromServer\n  @ SuiteNavManager.ts:148SuiteNavManager._getSuiteNavModel @\n  SuiteNavManager.ts:129SuiteNavManager.loadSuiteNav @\n  SuiteNavManager.ts:106(anonymous function) @\n  Shell.ts:164Shell._startApplication @ Shell.ts:145Shell.start @\n  Shell.ts:141(anonymous function) @ SPModuleLoader.ts:178\n  TraceLogger.ts:147 [OnPremSuiteNavDataSource] Failed to retrieve\n  Hybrid SuiteNavData TraceLogger.ts:147 [SuiteNavManager]\n  SuiteNavManager loadData Failed to retrieve Hybrid SuiteNavData\n  FetchProvider.ts:30 POST\n  <a href=\"https://softwares-macbook-pro.local:4321/sites/workbench/_api/contextinfo\" rel=\"nofollow noreferrer\">https://softwares-macbook-pro.local:4321/sites/workbench/_api/contextinfo</a>\n  405 (Method Not Allowed)FetchProvider.fetch @\n  FetchProvider.ts:30DigestCache.fetchDigest @\n  DigestCache.ts:73HttpClient.fetch @ HttpClient.ts:129HttpClient.post @\n  HttpClient.ts:167SPOSuiteNavDataSource.loadData @\n  SPOSuiteNavDataSource.ts:41SuiteNavManager._loadSuiteNavFromServer @\n  SuiteNavManager.ts:153SuiteNavManager._getSuiteNavModel @\n  SuiteNavManager.ts:129SuiteNavManager.loadSuiteNav @\n  SuiteNavManager.ts:106(anonymous function) @\n  Shell.ts:164Shell._startApplication @ Shell.ts:145Shell.start @\n  Shell.ts:141(anonymous function) @ SPModuleLoader.ts:178\n  FetchProvider.ts:30 GET\n  <a href=\"https://softwares-macbook-pro.local:4321/sites/workbench/_api/web/GetClientSideWebParts\" rel=\"nofollow noreferrer\">https://softwares-macbook-pro.local:4321/sites/workbench/_api/web/GetClientSideWebParts</a> 404 (Not Found)FetchProvider.fetch @\n  FetchProvider.ts:30BasicHttpClient.fetchCore @\n  BasicHttpClient.ts:68HttpClient._fetchWithInstrumentation @\n  HttpClient.ts:183HttpClient.fetch @ HttpClient.ts:141HttpClient.get @\n  HttpClient.ts:154(anonymous function) @\n  ClientSideWebPartManager.ts:335ServiceScope.whenFinished @\n  ServiceScope.ts:174(anonymous function) @\n  ClientSideWebPartManager.ts:333ClientSideWebPartManager.fetchWebParts\n  @ ClientSideWebPartManager.ts:327CanvasStore._fetchWebParts @\n  CanvasStore.ts:509CanvasStore @ CanvasStore.ts:93Canvas @\n  Canvas.ts:59Page.componentDidMount @ Page.tsx:28target.(anonymous\n  function) @ index.js:153notifyAll @ react.js:869close @\n  react.js:12870closeAll @ react.js:15699perform @\n  react.js:15646batchedMountComponentIntoNode @ react.js:10882perform @\n  react.js:15633batchedUpdates @ react.js:8456batchedUpdates @\n  react.js:13706_renderNewRootComponent @\n  react.js:11076ReactMount__renderNewRootComponent @\n  react.js:12353_renderSubtreeIntoContainer @ react.js:11150render @\n  react.js:11170React_render @ react.js:12353SpWebpartWorkbench.onRender\n  @ spWebpartWorkbench.tsx:44ClientSideApplication.render @\n  ClientSideApplication.ts:83(anonymous function) @\n  Shell.ts:165Shell._startApplication @ Shell.ts:145Shell.start @\n  Shell.ts:141(anonymous function) @ SPModuleLoader.ts:178\n  TraceLogger.ts:147 [SuiteNavManager] SuiteNavManager loadData Failed\n  to retrieve SPO SuiteNavData TraceLogger.ts:145\n  [ClientSideWebPartManager] SyntaxError: Unexpected token C in JSON at\n  position 0TraceLogger._writeToConsole @\n  TraceLogger.ts:145TraceLogger._log @\n  TraceLogger.ts:117TraceLogger.logError @ TraceLogger.ts:42(anonymous\n  function) @ ClientSideWebPartManager.ts:355 TraceLogger.ts:147\n  [ClientSideWebPartManager] Successfully loaded modules for webpart\n  7fb7d3c1-c91b-4038-8e2b-2c7dc5376161 TraceLogger.ts:147\n  [BaseClientSideWebPart] Constructed web part:\n  568966e1-6496-4915-927f-ce874bbe7d27 OnPremSuiteNavDataSource.ts:65\n  Uncaught (in promise) Error: Failed to retrieve Hybrid\n  SuiteNavData(…)OnPremSuiteNavDataSource._logAndThrowSuiteNavLoadingError\n  @ OnPremSuiteNavDataSource.ts:65(anonymous function) @\n  OnPremSuiteNavDataSource.ts:45 Beacon.js:372 Beacon: Logged to\n  UserEngagement with properties:\n  {\"EngagementName\":\"SPPages.SPThemeProvider.loadData.Start\",\"Properties\":\"{\\\"appver\\\":\\\"\\\"}\",\"Duration\":0,\"LogType\":0,\"ClientTime\":1478836974552,\"Source\":\"ClientV2Reliability\"}</p>\n</blockquote>\n\n<p><a href=\"https://i.stack.imgur.com/03ujV.jpg\" rel=\"nofollow noreferrer\"><img src=\"https://i.stack.imgur.com/03ujV.jpg\" alt=\"enter image description here\"></a></p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "authorize.net"
+      ],
+      "answers": [
+        {
+          "answer_id": 40514990,
+          "title": "authorize.net PHP Hello World bug",
+          "body": "<p>To solve this issue, I thought I'd see if anyone else had reported it, <a href=\"https://github.com/goetas/xsd2php/issues?q=is%3Aissue+is%3Aclosed\" rel=\"nofollow noreferrer\">so I had a search about in GitHub</a>. That revealed <a href=\"https://github.com/goetas/xsd2php/issues/116\" rel=\"nofollow noreferrer\">this bug report</a> which sounds exactly right:</p>\n\n<blockquote>\n  <p>GoetasWebservices\\Xsd\\XsdToPhpRuntime\\Jms\\Handler\\BaseTypesHandler does not exist any more?</p>\n</blockquote>\n\n<p>In response to this, the author points <a href=\"https://github.com/goetas/xsd2php#serialize--unserialize\" rel=\"nofollow noreferrer\">to this documentation</a> to solve unsatisfied dependencies using Composer. So I modified the <code>composer.json</code> to add the missing line (and ran it through <a href=\"http://jsonviewer.stack.hu/\" rel=\"nofollow noreferrer\">a formatter</a>):</p>\n\n<pre><code>{\n  \"require\": {\n    \"php\": \"&gt;=5.2.0\",\n    \"ext-curl\": \"*\",\n    \"authorizenet/authorizenet\": \"1.8.8\",\n    \"jms/serializer\": \"xsd2php-dev as 0.18.0\",\n    \"goetas-webservices/xsd2php-runtime\":\"^0.2.2\"\n  },\n  \"require-dev\": {\n    \"goetas/xsd2php\": \"2.*@dev\",\n    \"goetas/xsd-reader\": \"2.*@dev\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"vcs\",\n      \"url\": \"https://github.com/goetas/serializer.git\"\n    }\n  ]\n}\n</code></pre>\n\n<p>Unfortunately running <code>composer install</code> results in a dependencies conflict:</p>\n\n<pre><code>Updating dependencies (including require-dev)              \nYour requirements could not be resolved to an installable set of packages.\n\n  Problem 1\n    - Installation request for jms/serializer xsd2php-dev as 0.18.0 -&gt; satisfiable by jms/serializer[dev-xsd2php].\n    - goetas-webservices/xsd2php-runtime v0.2.2 requires jms/serializer ^1.2 -&gt; satisfiable by jms/serializer[1.4.x-dev].\n    - Can only install one of: jms/serializer[1.4.x-dev, dev-xsd2php].\n    - Installation request for goetas-webservices/xsd2php-runtime ^0.2.2 -&gt; satisfiable by goetas-webservices/xsd2php-runtime[v0.2.2].\n</code></pre>\n\n<p>In plain English, this means that:</p>\n\n<ul>\n<li>xsd2php-runtime wants serializer to be at 1.2</li>\n<li>We have requested serializer at 0.18.0</li>\n</ul>\n\n<p>Since we only really control our own requirements, I wondered if we could bump up our own request for <code>serializer</code> to 1.2, thus:</p>\n\n<pre><code>{\n  \"require\": {\n    \"php\": \"&gt;=5.2.0\",\n    \"ext-curl\": \"*\",\n    \"authorizenet/authorizenet\": \"1.8.8\",\n    \"jms/serializer\": \"xsd2php-dev as 1.2\",\n    \"goetas-webservices/xsd2php-runtime\":\"^0.2.2\"\n  },\n  \"require-dev\": {\n    \"goetas/xsd2php\": \"2.*@dev\",\n    \"goetas/xsd-reader\": \"2.*@dev\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"vcs\",\n      \"url\": \"https://github.com/goetas/serializer.git\"\n    }\n  ]\n}\n</code></pre>\n\n<p>This is a bit risky since we do not know if this will cause a run-time failure in the Authorize.net demo script, but at least the install will run now. Unfortunately however the same runtime error is exhibited:</p>\n\n<blockquote>\n  <p>PHP Fatal error:  Class 'Goetas\\Xsd\\XsdToPhp\\Jms\\Handler\\BaseTypesHandler' not found in /home/jon/Development/Personal/authorize.net/vendor/authorizenet/authorizenet/lib/net/authorize/api/controller/base/ApiOperationBase.php on line 82</p>\n</blockquote>\n\n<p>I wondered if this was an autoload failure, so let's look at that. We want <code>Goetas\\Xsd\\XsdToPhp\\Jms\\Handler\\BaseTypesHandler</code>, but if we look at our new dependency class, it turns out that the namespace was changed to <code>GoetasWebservices\\Xsd\\XsdToPhpRuntime\\Jms\\Handler\\BaseTypesHandler</code>. Normally we would just change the version 0.2.2 to an earlier version, but if you look <a href=\"https://github.com/goetas-webservices/xsd2php-runtime/tags\" rel=\"nofollow noreferrer\">at the release history</a>, the earliest release is 0.1.0, which was pushed after the namespace change.</p>\n\n<p>So we have two options at this point:</p>\n\n<ul>\n<li>Add <code>goetas-webservices/xsd2php-runtime</code> as a VCS dependency and specify a Git commit hash to check out at (this will result in an outdated and probably unsupported library);</li>\n<li>Modify the library required in the <code>authorizenet</code> dependency, and then ask the Authorise.net folks to modify it upstream (better, but requires their cooperation, which may hinder your progress).</li>\n</ul>\n\n<p>My opinion is that this guide, which ought to be \"quick start\", has been somewhat abandoned by Authorize.net, and I would not be surprised if a little search-engine detective work revealed other people with the same woes. I personally would plump for the second option, since the fix in <code>ApiOperationBase</code> is trivial.</p>\n\n<p>Change these lines:</p>\n\n<pre><code>use Goetas\\Xsd\\XsdToPhp\\Jms\\Handler\\BaseTypesHandler;\nuse Goetas\\Xsd\\XsdToPhp\\Jms\\Handler\\XmlSchemaDateHandler;\n</code></pre>\n\n<p>to these:</p>\n\n<pre><code>use GoetasWebservices\\Xsd\\XsdToPhpRuntime\\Jms\\Handler\\BaseTypesHandler;\nuse GoetasWebservices\\Xsd\\XsdToPhpRuntime\\Jms\\Handler\\XmlSchemaDateHandler;\n</code></pre>\n\n<p>Now the program will run:</p>\n\n<pre><code>$ php pay.php \n&lt;p&gt;Hello there 10. The reference id is ref1478722350&lt;/p&gt;\n</code></pre>\n\n<p>I would advise you to contact Authorize.net and log a bug; if they use GitHub issues, create an issue there and point them to this answer. Hopefully they will swap out the two abandoned packages as well, and if they are really good, they will set up a continuous integration system that will break if these kinds of dependency issues crop up again in the future.</p>\n"
+        },
+        {
+          "answer_id": 40539264,
+          "title": "authorize.net PHP Hello World bug",
+          "body": "<p>The version of the Authorize.Net PHP SDK that you're installing has a couple of dependencies on out of date components, as well as some namespace related problems that you're seeing once you run the \"charge-credit-card.php\" script. The latest version of the Authorize.Net PHP SDK (1.9.0) fixes these issues.</p>\n\n<p>So, the big issue is just that the sample composer.json on the \"Hello World\" page doesn't install the newer version, but installs an older version of the SDK that no longer works.</p>\n\n<p>Replacing the composer.json sample on the \"Hello World\" page with the following should make everything work just fine:</p>\n\n<pre><code>{\n    \"require\": {\n            \"authorizenet/authorizenet\": \"1.9.0\",\n            \"jms/serializer\": \"dev-serializer-master as 1.0\"\n    },\n        \"repositories\": [\n        {\n             \"type\": \"vcs\",\n             \"url\": \"https://github.com/goetas/serializer.git\"\n        }\n    ]\n}\n</code></pre>\n\n<p>Just replace the composer.json, do <code>composer update</code> or delete the \"vendor\" directory, then redo <code>composer install</code>.</p>\n\n<p>We'll hopefully get this changed on the \"Hello World\" page soon.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 8,
+        "user_id": 4403386,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/e6273f3771570022d8ea85a87b54a67f?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Chuck",
+        "link": "http://stackoverflow.com/users/4403386/chuck"
+      },
+      "answer_count": 2,
+      "last_activity_date": 1478823386,
+      "question_id": 40457035,
+      "title": "authorize.net PHP Hello World bug",
+      "body": "<p>I'm trying to get the <a href=\"https://developer.authorize.net/hello_world/\" rel=\"nofollow noreferrer\">PHP Hello World example</a> to work. I downloaded the code from the authorize.net site and I used Composer and the given <code>composer.json</code> file.</p>\n\n<p>When I run the command <strong>composer update</strong>, I get a warning message. </p>\n\n<blockquote>\n  <p><em>Package goetas/xsd2php is abandoned, you should avoid using it. Use goetas-webservices/xsd2php instead.</em></p>\n  \n  <p><em>Package goetas/xsd-reader is abandoned, you should avoid using it. Use goetas-webservices/xsd-reader instead.</em></p>\n</blockquote>\n\n<p>I tried running the <strong>charge-credit-card.php</strong> program in spite of the warning, but I get this error:</p>\n\n<blockquote>\n  <p>Fatal error: Class 'Goetas\\Xsd\\XsdToPhp\\Jms\\Handler\\BaseTypesHandler' not found in /var/www/public/newsite/vendor/authorizenet/authorizenet/lib/net/authorize/api/controller/base/ApiOperationBase.php on line 82</p>\n</blockquote>\n\n<p>I tried my hand at correcting the composer.json file to get rid of that error, but I only dug myself a deeper hole. </p>\n\n<p>Here's the composer.json file for reference.</p>\n\n<pre><code>{  \n\"require\": \n       {  \"php\": \"&gt;=5.2.0\",  \n           \"ext-curl\": \"*\",  \n           \"authorizenet/authorizenet\": \"1.8.8\",  \n           \"jms/serializer\": \"xsd2php-dev as 0.18.0\"},\n\"require-dev\": \n           {  \n                   \"goetas/xsd2php\": \"2.*@dev\",  \n                   \"goetas/xsd-reader\": \"2.*@dev\"},\n\"repositories\": \n            [{    \n                     \"type\": \"vcs\",    \n                     \"url\": \"https://github.com/goetas/serializer.git\"    \n}]}\n</code></pre>\n\n<p>And here's the PHP program I am running...</p>\n\n<pre><code>&lt;?php\nrequire 'vendor/autoload.php'; \nuse net\\authorize\\api\\contract\\v1 as AnetAPI;\nuse net\\authorize\\api\\controller as AnetController;\ndefine(\"AUTHORIZENET_LOG_FILE\",\"phplog\");\n\n// Common setup for API credentials  \n$merchantAuthentication = new AnetAPI\\MerchantAuthenticationType();   \n$merchantAuthentication-&gt;setName(\"123456789\");   \n$merchantAuthentication-&gt;setTransactionKey(\"abcdefghijklmnop\"); \n$refId = 'ref' . time();\n\n// Create the payment data for a credit card\n$creditCard = new AnetAPI\\CreditCardType();\n$creditCard-&gt;setCardNumber(\"4111111111111111\" );  \n$creditCard-&gt;setExpirationDate( \"2038-12\");\n$paymentOne = new AnetAPI\\PaymentType();\n$paymentOne-&gt;setCreditCard($creditCard);\n\n// Create a transaction\n$transactionRequestType = new AnetAPI\\TransactionRequestType();\n$transactionRequestType-&gt;setTransactionType(\"authCaptureTransaction\");   \n$transactionRequestType-&gt;setAmount(151.51);\n$transactionRequestType-&gt;setPayment($paymentOne);\n$request = new AnetAPI\\CreateTransactionRequest();\n$request-&gt;setMerchantAuthentication($merchantAuthentication);\n$request-&gt;setRefId( $refId);\n$request-&gt;setTransactionRequest($transactionRequestType);\n// if I comment out the line below, no error occurs\n$controller = new AnetController\\CreateTransactionController($request);\n//  $response = $controller-&gt;executeWithApiResponse(\\net\\authorize\\api\\constants\\ANetEnvironment::SANDBOX);   \n\necho \"&lt;p&gt;Hello there 10. The reference id is \" . $refId . \"&lt;/p&gt;\";\n?&gt;\n</code></pre>\n\n<p>Here is the console output from running composer install</p>\n\n<pre><code>Loading composer repositories with package information\nReading composer.json of jms/serializer (0.16.0)      \nReading composer.json of jms/serializer (0.15.0)\nReading composer.json of jms/serializer (0.14.0)\nReading composer.json of jms/serializer (0.13.0)\nReading composer.json of jms/serializer (0.12.0)\nReading composer.json of jms/serializer (0.11.0)\nReading composer.json of jms/serializer (event-sdispatcher)\nReading composer.json of jms/serializer (graph-refactor)   \nReading composer.json of jms/serializer (master)        \nReading composer.json of jms/serializer (ok-for-lignano)\nReading composer.json of jms/serializer (patch-1)       \nReading composer.json of jms/serializer (psr4)   \nReading composer.json of jms/serializer (remove-hndl)\nReading composer.json of jms/serializer (serializer-master)\nReading composer.json of jms/serializer (xsd2php)\n\nUpdating dependencies (including require-dev)\n\n   - Installing doctrine/lexer (v1.0.1)\n    Loading from cache\n\n   - Installing doctrine/annotations (v1.3.0)\n     Loading from cache\n\n   - Installing phpoption/phpoption (1.5.0)\n    Loading from cache\n\n   - Installing phpcollection/phpcollection (0.5.0)\n    Loading from cache\n\n   - Installing jms/parser-lib (1.0.0)\n    Loading from cache\n\n   - Installing jms/metadata (1.5.1)\n    Loading from cache\n\n   - Installing jms/serializer (dev-xsd2php f339d96)\n    Cloning f339d96f7e359e2837ed8b752348cc84823a9966\n\n   - Installing goetas-webservices/xsd-reader (v0.1.2)\n    Loading from cache\n\n   - Installing zendframework/zend-eventmanager (3.0.1)\n    Loading from cache\n\n   - Installing zendframework/zend-code (2.6.3)\n    Loading from cache\n\n   - Installing doctrine/inflector (v1.1.0)\n    Loading from cache\n\n   - Installing symfony/yaml (v3.1.6)\n    Loading from cache\n\n   - Installing psr/log (1.0.2)\n    Loading from cache\n\n   - Installing symfony/debug (v3.1.6)\n    Loading from cache\n\n   - Installing symfony/polyfill-mbstring (v1.2.0)\n    Loading from cache\n\n   - Installing symfony/console (v3.1.6)\n    Loading from cache\n\n   - Installing goetas/xsd2php (dev-master 7e1ab0a)\n    Cloning 7e1ab0a2d007991b0c6d326e9f67ec90c020b5e5\n\n   - Installing goetas/xsd-reader (dev-master c5bcc02)\n    Cloning c5bcc02d1a07f26533991e7b0d6c51a98d78c02c\n\n   - Installing authorizenet/authorizenet (1.8.8)\n    Loading from cache\n\n    zendframework/zend-eventmanager suggests installing container-interop/container-interop (^1.1.0, to use the lazy listeners feature)\n\n    zendframework/zend-eventmanager suggests installing zendframework/zend-stdlib (^2.7.3 || ^3.0, to use the FilterChain feature)\n\n    zendframework/zend-code suggests installing zendframework/zend-stdlib (Zend\\Stdlib component)\n\n    symfony/console suggests installing symfony/event-dispatcher ()\n\n    symfony/console suggests installing symfony/process ()\n\n    authorizenet/authorizenet suggests installing phpdocumentor/phpdocumentor (For generating API documentation)\n\n    Package goetas/xsd2php is abandoned, you should avoid using it. Use goetas-webservices/xsd2php instead.\n\n    Package goetas/xsd-reader is abandoned, you should avoid using it. Use goetas-webservices/xsd-reader instead.\n\n    Writing lock file\n\n    Generating autoload files\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "apache-pig"
+      ],
+      "owner": {
+        "reputation": 14287,
+        "user_id": 983722,
+        "user_type": "registered",
+        "accept_rate": 74,
+        "profile_image": "https://www.gravatar.com/avatar/45beee9b157c1cace13d6fdf180af9df?s=128&d=identicon&r=PG",
+        "display_name": "Dennis Jaheruddin",
+        "link": "http://stackoverflow.com/users/983722/dennis-jaheruddin"
+      },
+      "answer_count": 0,
+      "last_activity_date": 1478786552,
+      "question_id": 40529493,
+      "title": "Hello world in clean pig workspace",
+      "body": "<p>I wonder wheter it is possible to do the classic 'Hello world!' in Apache Pig.</p>\n\n<p>Pig is somewhat related to SQL and hive where one could simply do:</p>\n\n<pre><code>SELECT 'Hello Wold';\n</code></pre>\n\n<p>However, I have been unable to find a way to 'create something from nothing' in Pig.</p>\n\n<hr>\n\n<p>Note that if you are able to load in 1 line of data or more, you could of course do the following:</p>\n\n<ol>\n<li>Load</li>\n<li>limit 1</li>\n<li>Generate Hello World</li>\n</ol>\n\n<p>However, this is not what I am looking for. I hope to find a way to create a hello world example without having any kind of data available. </p>\n\n<p>In case you wonder: I am mostly asking this out of curiosity, but it could also be convenient to speed up the testing of code by just doing something in code (without having to touch the file system).</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "reference",
+        "sdk",
+        "mscorlib",
+        "cloud9"
+      ],
+      "answers": [
+        {
+          "answer_id": 40513944,
+          "title": "Hello World not working for C# on cloud9",
+          "body": "<p>you are missing <code>namespace</code></p>\n\n<pre><code>using System;\nnamespace namespace_name\n{\n   public class Hello2\n   {\n       public static void Main()\n       {\n             Console.WriteLine(\"Hello, World!\");\n        }\n    }\n}\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 7059939,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/d6b8c080f8963b12e7d55bc175c05eb3?s=128&d=identicon&r=PG&f=1",
+        "display_name": "M.P.",
+        "link": "http://stackoverflow.com/users/7059939/m-p"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1478717481,
+      "question_id": 40513903,
+      "title": "Hello World not working for C# on cloud9",
+      "body": "<p>How do I reference <code>mscorlib</code> for C# in cloud9? </p>\n\n<p>The sample code for hello world doesn't work</p>\n\n<pre><code>using System;\n\npublic class Hello2\n{\n   public static void Main()\n   {\n      Console.WriteLine(\"Hello, World!\");\n   }\n}\n</code></pre>\n\n<p>because it emits the following errors:</p>\n\n<blockquote>\n  <p>error: expected nested-name-specifier before ‘System’ using System;<br>\n      error: ‘System’ has not been declared<br>\n       error: expected unqualified-id before ‘public’<br>\n       public class Hello2  </p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "xml",
+        "magento"
+      ],
+      "owner": {
+        "reputation": 7,
+        "user_id": 2813618,
+        "user_type": "registered",
+        "accept_rate": 29,
+        "profile_image": "https://www.gravatar.com/avatar/fa89b75e913b946e234b44fec4fdcbe5?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Sunarto",
+        "link": "http://stackoverflow.com/users/2813618/sunarto"
+      },
+      "answer_count": 0,
+      "last_activity_date": 1478702178,
+      "question_id": 40476428,
+      "title": "Magento 2 Module Hello world Whoops, our bad",
+      "body": "<p>I want to create simple module hello world in Magento 2. but when I will try access my module. it is inaccessible and out error messages <strong>Error Whoops, our bad...</strong></p>\n\n<p>etc/module.xml</p>\n\n<pre><code>&lt;?xml version=\"1.0\"?&gt;\n&lt;config xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \nxsi:noNamespaceSchemaLocation=\"urn:magento:framework:Module/etc/module.xsd\"&gt;\n&lt;module name=\"Yusron_helloworld\" setup_version=\"0.0.1\"/&gt;\n&lt;/config&gt; \n</code></pre>\n\n<p>regitration.php</p>\n\n<pre><code>&lt;?php\n\\Magento\\Framework\\Component\\ComponentRegistrar::register(\n    \\Magento\\Framework\\Component\\ComponentRegistrar::MODULE,\n    'Yusron_Helloworld',\n    __DIR__\n);\n</code></pre>\n\n<p>etc/frontend/route.xml</p>\n\n<pre><code>&lt;?xml version=\"1.0\" ?&gt;\n&lt;config xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \nxsi:noNamespaceSchemaLocation=\"../../../../../../lib/internal/Magento/Framework/\nApp/etc/routes.xsd\"&gt;\n    &lt;router id=\"standard\"&gt;\n        &lt;route id=\"yusron\" frontName=\"yusron\"&gt;\n            &lt;module name=\"Yusron_helloworld\" /&gt;\n        &lt;/route&gt;\n    &lt;/router&gt;\n&lt;/config&gt;\n</code></pre>\n\n<p>controller/Hello/ => World.php</p>\n\n<pre><code>&lt;?php\nnamespace Yusron\\helloworld\\controller\\Hello;\n\n\nclass World extends \\Magento\\Framework\\App\\Action\\Action\n{\n    public function __construct(\n        \\Magento\\Framework\\App\\Action\\Context $context)\n    {\n        return parent::__construct($context);\n    }\n\n    public function execute()\n    {\n        echo 'Hello World';\n        exit;\n    } \n}\n</code></pre>\n\n<p>on the module list are already register and enablee\ni've tried bin/magento setup:upgrade or bin/magento setup:di:compile</p>\n"
+    },
+    {
+      "tags": [
+        "php",
+        "mysql",
+        "sql",
+        "magento",
+        "controller"
+      ],
+      "answers": [
+        {
+          "answer_id": 585607,
+          "title": "How to create a simple &#39;Hello World&#39; module in Magento?",
+          "body": "<p>I've been wrestling with Magento for the last month or so and I'm still trying to figure it out. So this is a case of the blind leading the blind. There's little in the way of documentation and the forum/wiki is chaotic at best. Not only that, but there are several solutions that are either outdated or far from optimal.\nI'm not sure if you have a project or just trying to figure it out, but it's probably easier if you started with modifying existing functionality as opposed to creating something completely new. For that I'd definately go with the \"Recommended articles for developers\" in the wiki. The new payment method one was a real eye-opener.</p>\n\n<p>For debugging I'd definitely recommend <a href=\"http://magento.stackexchange.com/questions/181/how-to-configure-firephp\">using FirePHP</a> and looking at your HTML source  when something goes wrong. The ole echo debug method doesn't really work all that well.</p>\n\n<p>The general architecture is so mind-numbingly complex, that even if I completely understood it, I'd need to write a book to cover it. The best I can do is give you advice I wish someone had given me when I first started...</p>\n\n<p>Stay away from core files. Don't modify them, instead write your own module and override what you need.</p>\n\n<p>Magento uses config files consisting of XML to decide what it needs to do. In order to get it to run your own stuff as opposed to core functionality you need the correct xml. Unfortunately there is no guide on how to build you XML; you need to look at examples and do some serious testing. To complicate things the content of these files is largely case-sensitive. However if you master these you can override any part of the basic functionality which makes for a very powerful system.</p>\n\n<p>Magento uses methods like <code>Mage::getModel('mymodel')</code>, <code>Mage::getSingleton('mysingleton')</code>, <code>Mage::helper('myhelper')</code> to return objects of certain classes. It finds these by default in its core namespace. If you want it to use your own, you need to override these in your <code>config.xml</code> file.</p>\n\n<p>The name of your classes must correspond to the folder they're in.</p>\n\n<p>A lot of the objects in Magento ultimately extend something called a <code>Varien_Object</code>. This is a general purpose class (kind of like a swiss army knife) and its purpose in life is to allow you to define your own methods/variables on the fly. For example you'll see it used as a glorified array to pass data from one method to another. </p>\n\n<p>During development make sure you caching is disabled. It'll make magento excruciatingly slow, but it'll save you a lot of head trauma (from banging it on your desk).</p>\n\n<p>You'll see <code>$this</code> being used a lot. It means a different class depending on what file you see it. <code>get_class($this)</code> is your friend, especially in conjunction with FirePHP.</p>\n\n<p>Jot things down on paper. A lot. There are countless little factoids that you're gonna need 1-2 days after you encounter them.</p>\n\n<p>Magento loves OO. Don't be surprised if tracing a method takes you through 5-10 different classes.</p>\n\n<p>Read the designer's guide <a href=\"http://www.magentocommerce.com/design_guide\" rel=\"nofollow noreferrer\">here</a>. It's meant mostly for graphics designers, but you <em>need</em> it to understand where and why the output from your module will end up. For that don't forget to turn on \"Template path hints\" in the developer section of the admin panel.</p>\n\n<p>There's more, but I'll stop here before this turns into a dissertation.</p>\n"
+        },
+        {
+          "answer_id": 588683,
+          "title": "How to create a simple &#39;Hello World&#39; module in Magento?",
+          "body": "<p>First and foremost, I highly recommend you buy the <a href=\"http://www.phparch.com/books/phparchitects-guide-to-programming-with-magento/\" rel=\"nofollow noreferrer\">PDF/E-Book from PHP Architect</a>. It's US$20, but is the only straightforward \"Here's how Magento works\" resource I've been able to find. I've also started writing <a href=\"http://alanstorm.com/category/magento\" rel=\"nofollow noreferrer\">Magento tutorials at my own website</a>.</p>\n\n<p>Second, if you have a choice, and aren't an experienced programmer or don't have access to an experienced programmer (ideally in PHP <em>and</em> Java), <strong>pick another cart</strong>. Magento is well engineered, but it was engineered to be a shopping cart solution that other programmers can build modules on top of. It was not engineered to be easily understood by people who are smart, but aren't programmers.</p>\n\n<p>Third, Magento MVC is very different from the <a href=\"http://en.wikipedia.org/wiki/Ruby_on_Rails\" rel=\"nofollow noreferrer\">Ruby on Rails</a>, <a href=\"http://en.wikipedia.org/wiki/Django_%28web_framework%29\" rel=\"nofollow noreferrer\">Django</a>, <a href=\"http://en.wikipedia.org/wiki/Codeigniter#CodeIgniter\" rel=\"nofollow noreferrer\">CodeIgniter</a>, <a href=\"http://en.wikipedia.org/wiki/CakePHP\" rel=\"nofollow noreferrer\">CakePHP</a>, etc. MVC model that's popular with PHP developers these days. I think it's based on the <a href=\"http://en.wikipedia.org/wiki/Zend_Framework\" rel=\"nofollow noreferrer\">Zend</a> model, and the whole thing is very Java OOP-like. There's <strong>two</strong> controllers you need to be concerned about. The module/frontName controller, and then the MVC controller.</p>\n\n<p>Fourth, the Magento application itself is built using the same module system you'll be using, so poking around the core code is a useful learning tactic. Also, a lot of what you'll be doing with Magento is <strong>overriding</strong> existing classes. What I'm covering here is <strong>creating</strong> new functionality, not overriding. Keep this in mind when you're looking at the code samples out there.</p>\n\n<p>I'm going to start with your first question, showing you how to setup a controller/router to respond to a specific URL. This will be a small novel. I might have time later for the model/template related topics, but for now, I don't. I will, however, briefly speak to your SQL question.</p>\n\n<p>Magento uses an <a href=\"http://en.wikipedia.org/wiki/Entity-Attribute-Value_model\" rel=\"nofollow noreferrer\">EAV</a> database architecture. Whenever possible, try to use the model objects the system provides to get the information you need. I know it's all there in the SQL tables, but it's best not to think of grabbing data using raw SQL queries, or you'll go mad.</p>\n\n<p>Final disclaimer. I've been using Magento for about two or three weeks, so caveat emptor. This is an exercise to get this straight in my head as much as it is to help Stack&nbsp;Overflow.</p>\n\n<h2>Create a module</h2>\n\n<p>All additions and customizations to Magento are done through modules. So, the first thing you'll need to do is create a new module. Create an XML file in <code>app/modules</code> named as follows</p>\n\n<pre class=\"lang-bash prettyprint-override\"><code>cd /path/to/store/app\ntouch etc/modules/MyCompanyName_HelloWorld.xml\n</code></pre>\n\n<pre class=\"lang-xml prettyprint-override\"><code>&lt;?xml version=\"1.0\"?&gt;\n&lt;config&gt;\n     &lt;modules&gt;\n        &lt;MyCompanyName_HelloWorld&gt;\n            &lt;active&gt;true&lt;/active&gt;\n            &lt;codePool&gt;local&lt;/codePool&gt;\n        &lt;/MyCompanyName_HelloWorld&gt;\n     &lt;/modules&gt;\n&lt;/config&gt;\n</code></pre>\n\n<p>MyCompanyName is a unique namespace for your modifications, it doesn't have to be your company's name, but that the recommended convention my magento. <code>HelloWorld</code> is the name of your module.</p>\n\n<h2>Clear the application cache</h2>\n\n<p>Now that the module file is in place, we'll need to let Magento know about it (and check our work). In the admin application</p>\n\n<ol>\n<li>Go to System->Cache Management</li>\n<li>Select Refresh from the All Cache menu</li>\n<li>Click Save Cache settings</li>\n</ol>\n\n<p>Now, we make sure that Magento knows about the module</p>\n\n<ol>\n<li>Go to System->Configuration</li>\n<li>Click Advanced</li>\n<li>In the \"Disable modules output\" setting box, look for your new module named \"MyCompanyName_HelloWorld\"</li>\n</ol>\n\n<p>If you can live with the performance slow down, you might want to turn off the application cache while developing/learning. Nothing is more frustrating then forgetting the clear out the cache and wondering why your changes aren't showing up.</p>\n\n<h2>Setup the directory structure</h2>\n\n<p>Next, we'll need to setup a directory structure for the module. You won't need all these directories, but there's no harm in setting them all up now.</p>\n\n<pre class=\"lang-bash prettyprint-override\"><code>mkdir -p app/code/local/MyCompanyName/HelloWorld/Block\nmkdir -p app/code/local/MyCompanyName/HelloWorld/controllers\nmkdir -p app/code/local/MyCompanyName/HelloWorld/Model\nmkdir -p app/code/local/MyCompanyName/HelloWorld/Helper\nmkdir -p app/code/local/MyCompanyName/HelloWorld/etc\nmkdir -p app/code/local/MyCompanyName/HelloWorld/sql\n</code></pre>\n\n<p>And add a configuration file</p>\n\n<pre class=\"lang-bash prettyprint-override\"><code>touch app/code/local/MyCompanyName/HelloWorld/etc/config.xml\n</code></pre>\n\n<p>and inside the configuration file, add the following, which is essentially a \"blank\" configuration.</p>\n\n<pre class=\"lang-xml prettyprint-override\"><code>&lt;?xml version=\"1.0\"?&gt;\n&lt;config&gt;\n    &lt;modules&gt;\n        &lt;MyCompanyName_HelloWorld&gt;\n            &lt;version&gt;0.1.0&lt;/version&gt;\n        &lt;/MyCompanyName_HelloWorld&gt;\n    &lt;/modules&gt;\n&lt;/config&gt;\n</code></pre>\n\n<p>Oversimplifying things, this configuration file will let you tell Magento what code you want to run.</p>\n\n<h2>Setting up the router</h2>\n\n<p>Next, we need to setup the module's routers. This will let the system know that we're handling any URLs in the form of</p>\n\n<pre class=\"lang-none prettyprint-override\"><code>http://example.com/magento/index.php/helloworld\n</code></pre>\n\n<p>So, in your configuration file, add the following section.</p>\n\n<pre class=\"lang-xml prettyprint-override\"><code>&lt;config&gt;\n&lt;!-- ... --&gt;\n    &lt;frontend&gt;\n        &lt;routers&gt;\n            &lt;!-- the &lt;helloworld&gt; tagname appears to be arbitrary, but by\n            convention is should match the frontName tag below--&gt;\n            &lt;helloworld&gt;\n                &lt;use&gt;standard&lt;/use&gt;\n                &lt;args&gt;\n                    &lt;module&gt;MyCompanyName_HelloWorld&lt;/module&gt;\n                    &lt;frontName&gt;helloworld&lt;/frontName&gt;\n                &lt;/args&gt;\n            &lt;/helloworld&gt;\n        &lt;/routers&gt;\n    &lt;/frontend&gt;\n&lt;!-- ... --&gt;\n&lt;/config&gt;\n</code></pre>\n\n<p>What you're saying here is \"any URL with the frontName of helloworld ...</p>\n\n<pre class=\"lang-none prettyprint-override\"><code>http://example.com/magento/index.php/helloworld\n</code></pre>\n\n<p>should use the frontName controller MyCompanyName_HelloWorld\".</p>\n\n<p>So, with the above configuration in place, when you load the helloworld page above, you'll get a 404 page. That's because we haven't created a file for our controller. Let's do that now.</p>\n\n<pre class=\"lang-bash prettyprint-override\"><code>touch app/code/local/MyCompanyName/HelloWorld/controllers/IndexController.php\n</code></pre>\n\n<p>Now try loading the page. Progress! Instead of a 404, you'll get a PHP/Magento exception</p>\n\n<pre class=\"lang-none prettyprint-override\"><code>Controller file was loaded but class does not exist\n</code></pre>\n\n<p>So, open the file we just created, and paste in the following code. The name of the class needs to be based on the name you provided in your router.</p>\n\n<pre class=\"lang-php prettyprint-override\"><code>&lt;?php\nclass MyCompanyName_HelloWorld_IndexController extends Mage_Core_Controller_Front_Action{\n    public function indexAction(){\n        echo \"We're echoing just to show that this is what's called, normally you'd have some kind of redirect going on here\";\n    }\n}\n?&gt;\n</code></pre>\n\n<p>What we've just setup is the module/frontName controller. \nThis is the default controller and the default action of the module.\nIf you want to add controllers or actions, you have to remember that the tree first part of a Magento URL are immutable they will always go this way <code>http://example.com/magento/index.php/frontName/controllerName/actionName</code></p>\n\n<p>So if you want to match this url</p>\n\n<pre class=\"lang-none prettyprint-override\"><code>http://example.com/magento/index.php/helloworld/foo\n</code></pre>\n\n<p>You will have to have a FooController, which you can do this way :</p>\n\n<pre class=\"lang-bash prettyprint-override\"><code>touch app/code/local/MyCompanyName/HelloWorld/controllers/FooController.php\n</code></pre>\n\n<pre class=\"lang-php prettyprint-override\"><code>&lt;?php\nclass MyCompanyName_HelloWorld_FooController extends Mage_Core_Controller_Front_Action{\n    public function indexAction(){\n        echo 'Foo Index Action';\n    }\n\n    public function addAction(){\n        echo 'Foo add Action';\n    }\n\n    public function deleteAction(){\n        echo 'Foo delete Action';\n    }\n}\n?&gt;\n</code></pre>\n\n<p>Please note that the default controller IndexController and the default action indexAction can by implicit but have to be explicit if something come after it.\nSo <code>http://example.com/magento/index.php/helloworld/foo</code> will match the controller FooController and the action indexAction and NOT the action fooAction of the IndexController. If you want to have a fooAction, in the controller IndexController you then have to call this controller explicitly like this way :\n<code>http://example.com/magento/index.php/helloworld/index/foo</code> because the second part of the url is and will always be the controllerName.\nThis behaviour is an inheritance of the Zend Framework bundled in Magento.</p>\n\n<p>You should now be able to hit the following URLs and see the results of your echo statements</p>\n\n<pre class=\"lang-none prettyprint-override\"><code>http://example.com/magento/index.php/helloworld/foo\nhttp://example.com/magento/index.php/helloworld/foo/add\nhttp://example.com/magento/index.php/helloworld/foo/delete\n</code></pre>\n\n<p>So, that should give you a basic idea on how Magento dispatches to a controller. From here I'd recommended poking at the existing Magento controller classes to see how models and the template/layout system should be used.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 67987,
+        "user_id": 49153,
+        "user_type": "registered",
+        "accept_rate": 91,
+        "profile_image": "https://www.gravatar.com/avatar/833df8cee775eea743cb1172dfcd3809?s=128&d=identicon&r=PG",
+        "display_name": "Click Upvote",
+        "link": "http://stackoverflow.com/users/49153/click-upvote"
+      },
+      "answer_count": 2,
+      "last_activity_date": 1478689568,
+      "question_id": 576908,
+      "title": "How to create a simple &#39;Hello World&#39; module in Magento?",
+      "body": "<p>How can the following be accomplish in Magento?</p>\n\n<ul>\n<li><p>Display a \"Hello World\" message using a controller/view/model approach. So, if I went to <code>http://example.com/myController</code> it would show the string 'Hello World'. Being able to show this string within the template of my website (for example, the header, footer, etc.) will be a bonus.</p></li>\n<li><p>How to add a method to this controller (or a new controller if necessary), which interacts with a model, and performs the query <code>Select * FROM articles where id='10'</code> and returns the row (containing the columns <code>id, title, content</code>) to the controller? And then use the controller to include a view, which would display this row. So going to <code>http://example.com/myController/show_row</code> (or something similar) would display the row within a view. (No need to be fancy, just a <code>echo $row-&gt;id;</code> or something similar would work.)</p></li>\n</ul>\n\n<p>Any other information about Magento's code structure will also be very helpful. </p>\n"
+    },
+    {
+      "tags": [
+        "android",
+        "cordova",
+        "cordova6.4.0"
+      ],
+      "answers": [
+        {
+          "answer_id": 40504147,
+          "title": "Hello World App crashing in Cordova 6.4.0",
+          "body": "<p>I changed <code>CPU/ABI</code> from <strong>Intel Atom (x86_64)</strong> to <strong>Google APIs Intel Atom (x86_64)</strong>. It did work. </p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1656,
+        "user_id": 735259,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://i.stack.imgur.com/DtpWS.png?s=128&g=1",
+        "display_name": "Ryu Kaplan",
+        "link": "http://stackoverflow.com/users/735259/ryu-kaplan"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1478685437,
+      "question_id": 40482501,
+      "title": "Hello World App crashing in Cordova 6.4.0",
+      "body": "<p>I am new to Cordova and I can't get the Cordova \"hello world\" application to display on Android Emulator but I can run same app in browser successfully. Also I can run the app in online cloud emulators.</p>\n\n<p>Cordova version : 6.4.0</p>\n\n<p>NodeJs : 4.6.1</p>\n\n<p>Ubuntu : 14.04 64Bit</p>\n\n<p><strong>This is my android virtual device settings</strong></p>\n\n<p><a href=\"https://i.stack.imgur.com/LWDGZ.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.stack.imgur.com/LWDGZ.png\" alt=\"This is my android virtual device settings\"></a></p>\n\n<p><strong>This is my stacktrace when trying to run the hello world app.</strong></p>\n\n<blockquote>\n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ]</p>\n  \n  <h3>### ### ### ### ### ### ### ### ### ### ###</h3>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ] Chrome build\n  fingerprint:</p>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ]\n  1.0.0</p>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ] 10000</p>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ]\n  3874b69a-4a70-400e-94db-0744eafe8cbf</p>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 W/google-breakpad ]</p>\n  \n  <h3>### ### ### ### ### ### ### ### ### ### ###</h3>\n  \n  <p>[ 11-08 08:45:27.115  3256: 3256 F/libc     ] Fatal signal 6\n  (SIGABRT), code -6 in tid 3256 (m.example.hello)</p>\n  \n  <p>[ 11-08 08:45:27.115  1183: 1183 W/         ] debuggerd: handling\n  request: pid=3256 uid=10060 gid=10060 tid=3256</p>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ]</p>\n  \n  <hr>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ] Build fingerprint:\n  'Android/sdk_phone_x86_64/generic_x86_64:7.0/NYC/3245079:userdebug/test-keys'</p>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ] Revision: '0'</p>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ] ABI: 'x86_64'</p>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ] pid: 3256, tid: 3256,\n  name: m.example.hello  >>> com.example.hello &lt;&lt;&lt;</p>\n  \n  <p>[ 11-08 08:45:27.119  3275: 3275 F/DEBUG    ] signal 6 (SIGABRT), code\n  -6 (SI_TKILL), fault addr --------</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ] Abort message:\n  '[FATAL:gpu_info_collector_android.cc(193)] failed to create a pbuffer\n  surface for fetching driver strings. EGL_SUCCESS (3000) '</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      rax 0000000000000000  rbx 00007ffef7ff9be8  rcx ffffffffffffffff  rdx 0000000000000006</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      rsi 0000000000000cb8  rdi 0000000000000cb8</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      r8  0000000000000305  r9  00007ffee3659c75  r10 0000000000000008  r11 0000000000000206</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      r12 0000000000000cb8  r13 0000000000000006  r14 00007ffef69eb000  r15 00007fff5da2f320</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      cs  0000000000000033  ss  000000000000002b</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      rip 00007ffef6984b27  rbp 0000000000000058  rsp 00007fff5da2ec88  eflags 0000000000000206</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]</p>\n  \n  <p>backtrace:</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      #00 pc 000000000008db27  /system/lib64/libc.so (tgkill+7)</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      #01 pc 000000000008a5c1  /system/lib64/libc.so (pthread_kill+65)</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      #02 pc 0000000000030241  /system/lib64/libc.so (raise+17)</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      #03 pc 000000000002877d  /system/lib64/libc.so (abort+77)</p>\n  \n  <p>[ 11-08 08:45:27.120  3275: 3275 F/DEBUG    ]\n      #04 pc 0000000002a93c38  /system/app/webview/webview.apk (offset 0x3c9c000)</p>\n  \n  <p>[ 11-08 08:45:27.415  1571: 1643 I/BootReceiver ] Copying\n  /data/tombstones/tombstone_09 to DropBox (SYSTEM_TOMBSTONE)</p>\n  \n  <p>[ 11-08 08:45:27.419  1183: 1183 W/         ] debuggerd: resuming\n  target 3256</p>\n  \n  <p>[ 11-08 08:45:27.503  1233: 1233 I/Zygote   ] Process 3256 exited due\n  to signal (6)</p>\n  \n  <p>[ 11-08 08:45:27.629  1571: 3280 W/ActivityManager ]   Force finishing\n  activity com.example.hello/.MainActivity</p>\n  \n  <p>[ 11-08 08:45:27.631  1571: 3280 W/ActivityManager ] Exception thrown\n  during pause android.os.DeadObjectException   at\n  android.os.BinderProxy.transactNative(Native Method)  at\n  android.os.BinderProxy.transact(Binder.java:615)  at\n  android.app.ApplicationThreadProxy.schedulePauseActivity(ApplicationThreadNative.java:784)\n    at\n  com.android.server.am.ActivityStack.startPausingLocked(ActivityStack.java:1128)\n    at\n  com.android.server.am.ActivityStack.finishActivityLocked(ActivityStack.java:3483)\n    at\n  com.android.server.am.ActivityStack.finishTopRunningActivityLocked(ActivityStack.java:3319)\n    at\n  com.android.server.am.ActivityStackSupervisor.finishTopRunningActivityLocked(ActivityStackSupervisor.java:1821)\n    at\n  com.android.server.am.AppErrors.handleAppCrashLocked(AppErrors.java:619)\n    at\n  com.android.server.am.AppErrors.makeAppCrashingLocked(AppErrors.java:481)\n    at\n  com.android.server.am.AppErrors.crashApplicationInner(AppErrors.java:357)\n    at\n  com.android.server.am.AppErrors.crashApplication(AppErrors.java:309)\n    at\n  com.android.server.am.ActivityManagerService.handleApplicationCrashInner(ActivityManagerService.java:13226)\n    at\n  com.android.server.am.NativeCrashListener$NativeCrashReporter.run(NativeCrashListener.java:86)</p>\n  \n  <p>[ 11-08 08:45:27.631  1226: 1226 E/lowmemorykiller ] Error opening\n  /proc/3256/oom_score_adj; errno=2</p>\n  \n  <p>[ 11-08 08:45:27.751  1228: 1228 D/gralloc  ] Registering a buffer in\n  the process that created it. This may cause memory ordering problems.</p>\n  \n  <p>[ 11-08 08:45:27.751  1228: 1228 E/libEGL   ] called unimplemented\n  OpenGL ES API</p>\n  \n  <p>[ 11-08 08:45:27.751  1228: 1228 E/SurfaceFlinger ]\n  glCheckFramebufferStatusOES error 1200695526</p>\n  \n  <p>[ 11-08 08:45:27.751  1228: 1228 E/SurfaceFlinger ] got\n  GL_FRAMEBUFFER_COMPLETE_OES error while taking screenshot</p>\n  \n  <p>[ 11-08 08:45:27.751  1571: 3280 W/WindowManager ] Screenshot failure\n  taking screenshot for (1440x2560) to layer 22015</p>\n  \n  <p>[ 11-08 08:45:27.753  1571: 1611 W/art      ] Long monitor contention\n  with owner NativeCrashReport (3280) at void\n  com.android.server.am.AppErrors.crashApplicationInner(com.android.server.am.ProcessRecord,\n  android.app.ApplicationErrorReport$CrashInfo)(AppErrors.java:328)\n  waiters=4 in void\n  com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied()\n  for 249ms</p>\n  \n  <p>[ 11-08 08:45:27.753  1571: 1611 I/ActivityManager ] Process\n  com.example.hello (pid 3256) has died</p>\n  \n  <p>[ 11-08 08:45:27.755  1571: 1647 W/art      ] Long monitor contention\n  with owner NativeCrashReport (3280) at void\n  com.android.server.am.AppErrors.crashApplicationInner(com.android.server.am.ProcessRecord,\n  android.app.ApplicationErrorReport$CrashInfo)(AppErrors.java:328)\n  waiters=6 in void\n  com.android.server.am.ActivityManagerService$LocalService.notifyAppTransitionFinished()\n  for 126ms</p>\n  \n  <p>[ 11-08 08:45:27.763  1571: 1931 W/InputMethodManagerService ] Window\n  already focused, ignoring focus gain of:\n  com.android.internal.view.IInputMethodClient$Stub$Proxy@17014ac\n  attribute=null, token = android.os.BinderProxy@52c4ec5</p>\n  \n  <p>[ 11-08 08:45:28.075  1571: 2551 W/art      ] Long monitor contention\n  with owner android.display (1647) at void\n  com.android.server.wm.WindowAnimator$1.doFrame(long)(WindowAnimator.java:138)\n  waiters=1 in void\n  com.android.server.wm.WindowManagerService.finishDrawingWindow(com.android.server.wm.Session,\n  android.view.IWindow) for 132ms</p>\n  \n  <p>[ 11-08 08:45:28.205  1571: 1647 I/WindowManager ] Destroying surface\n  Surface(name=Starting com.example.hello) called by\n  com.android.server.wm.WindowStateAnimator.destroySurface:2014\n  com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:881\n  com.android.server.wm.WindowState.removeLocked:1449\n  com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2478\n  com.android.server.wm.AppWindowToken.destroySurfaces:365\n  com.android.server.wm.WindowStateAnimator.finishExit:565\n  com.android.server.wm.AppWindowAnimator.stepAnimationLocked:427\n  com.android.server.wm.WindowAnimator.updateAppWindowsLocked:196 </p>\n  \n  <p>[ 11-08 08:45:30.183  1571: 1869 E/TaskPersister ] File error\n  accessing recents directory (directory doesn't exist?).</p>\n  \n  <p>Also these did not help.</p>\n  \n  <p><a href=\"http://stackoverflow.com/questions/27897900/cordova-hello-world-app-crashing\">Cordova hello world app crashing</a></p>\n  \n  <p><a href=\"http://stackoverflow.com/questions/30149970/cordova-hello-world-app-wont-display\">Cordova &quot;hello world&quot; app won&#39;t display</a></p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "django"
+      ],
+      "answers": [
+        {
+          "answer_id": 40465565,
+          "title": "Server doesn&#39;t start in hello world app",
+          "body": "<p>I think you are doing it the wrong way.\n<a href=\"https://www.djangoproject.com/start/\" rel=\"nofollow noreferrer\">Use this link to know how to make a django app</a></p>\n"
+        },
+        {
+          "answer_id": 40465981,
+          "title": "Server doesn&#39;t start in hello world app",
+          "body": "<p>I see that you are trying to directly call hello.py with runserver as an argument.\nIf you are writing and trying to test Django, make sure that you are using the framework to start the server.  It will take care of all the 'Django stuff' required:\n<code>python manage.py runserver</code>\nmanage.py takes care of setting things up for you.</p>\n"
+        },
+        {
+          "answer_id": 40475202,
+          "title": "Server doesn&#39;t start in hello world app",
+          "body": "<p>You seem to be missing </p>\n\n<pre><code> from django.conf.urls import url\n</code></pre>\n\n<p>full example:\n <a class='doc-link' href=\"http://stackoverflow.com/documentation/django/200/getting-started-with-django/15995/single-file-hello-world-example#t=201611072215366682362\">Single File Hello World Example</a> </p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1809,
+        "user_id": 3122885,
+        "user_type": "registered",
+        "accept_rate": 51,
+        "profile_image": "https://www.gravatar.com/avatar/fe1eced7899a319fb446e04b63ac7eea?s=128&d=identicon&r=PG&f=1",
+        "display_name": "octavian",
+        "link": "http://stackoverflow.com/users/3122885/octavian"
+      },
+      "answer_count": 3,
+      "last_activity_date": 1478557025,
+      "question_id": 40464819,
+      "title": "Server doesn&#39;t start in hello world app",
+      "body": "<p>I am trying to create a Django hello world app.</p>\n\n<p>I have the following code:</p>\n\n<pre><code>import sys\n\nfrom django.conf import settings\nfrom django.http import HttpResponse\n\nsettings.configure(\n    DEBUG=True,\n    SECRET_KEY='badkey',\n    ROOT_URLCONF=sys.modules[__name__],\n)\n\ndef index(request):\n    return HttpResponse('Hello, World')\n\nurlpatterns = [\n    (r'^hello-world/$', index),\n]\n</code></pre>\n\n<p>Located at <code>/smartQuiz/smartQuiz/hello.py</code>, where <code>smartQuiz</code> is the root directory of my project.</p>\n\n<p>If I run <code>python hello.py runserver</code> from the directory where <code>hello.py</code> is located, the server won't start.</p>\n\n<p>What am I doing wrong?</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "eclipse",
+        "maven"
+      ],
+      "owner": {
+        "reputation": 3,
+        "user_id": 6196345,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/16f410e1c45a8c554485d0ee4b92cd20?s=128&d=identicon&r=PG&f=1",
+        "display_name": "T. Borges",
+        "link": "http://stackoverflow.com/users/6196345/t-borges"
+      },
+      "answer_count": 0,
+      "last_activity_date": 1478313343,
+      "question_id": 40425455,
+      "title": "Spark with maven &quot;hello world&quot;",
+      "body": "<p>i'm trying to do this hello world from Spark with Maven</p>\n\n<pre><code>public class Main {\n     public static void main(String[] args) {\n        get(\"/hello\", (req, res) --&gt; \"Hello World\");\n     }\n}\n</code></pre>\n\n<p>I'm trying to run this on eclipse and its telling me that req isn't a variable. \nThis exemple is available at <a href=\"https://sparktutorials.github.io/2015/04/02/setting-up-a-spark-project-with-maven.html\" rel=\"nofollow noreferrer\">https://sparktutorials.github.io/2015/04/02/setting-up-a-spark-project-with-maven.html</a></p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "string",
+        "random"
+      ],
+      "answers": [
+        {
+          "answer_id": 15182511,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>When an instance of <code>java.util.Random</code> is constructed with a specific seed parameter (in this case <code>-229985452</code> or <code>-147909649</code>), it follows the random number generation algorithm <em>beginning</em> with that seed value.</p>\n\n<p>Every <code>Random</code> constructed with the same seed will generate the same pattern of numbers every time.</p>\n"
+        },
+        {
+          "answer_id": 15182574,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>Random always return the same sequence. It's used for shuffling arrays and other operations as permutations.</p>\n\n<p>To get different sequences, it's necessary initialize the sequence in some position, called \"seed\".</p>\n\n<p>The randomSting get the random number in the i position (seed = -229985452) of the \"random\" sequence. Then uses the <a href=\"http://en.wikipedia.org/wiki/ASCII\">ASCII</a> code for the next 27 character in the sequence after the seed position until this value are equal to 0. This return the \"hello\". The same operation is done for \"world\". </p>\n\n<p>I think that the code did not work for any other words. The guy that programmed that knows the random sequence very well.</p>\n\n<p>It's very great geek code!</p>\n"
+        },
+        {
+          "answer_id": 15182578,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>The other answers explain why, but here is how:</p>\n\n<pre><code>new Random(-229985452).nextInt(27)\n</code></pre>\n\n<p>The first 6 numbers that the above random generates are:</p>\n\n<pre><code>8\n5\n12\n12\n15\n0\n</code></pre>\n\n<p>and the first 6 numbers that <code>new Random(-147909649).nextInt(27)</code> generates are:</p>\n\n<pre><code>23\n15\n18\n12\n4\n0\n</code></pre>\n\n<p>Then just add those numbers to the integer representation of the character <code>`</code> (which is 96):</p>\n\n<pre><code>8  + 96 = 104 --&gt; h\n5  + 96 = 101 --&gt; e\n12 + 96 = 108 --&gt; l\n12 + 96 = 108 --&gt; l\n15 + 96 = 111 --&gt; o\n\n23 + 96 = 119 --&gt; w\n15 + 96 = 111 --&gt; o\n18 + 96 = 114 --&gt; r\n12 + 96 = 108 --&gt; l\n4  + 96 = 100 --&gt; d\n</code></pre>\n"
+        },
+        {
+          "answer_id": 15187009,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>I'll just leave it here. Whoever has a lot of (CPU) time to spare, feel free to experiment :) Also, if you have mastered some fork-join-fu to make this thing burn all CPU cores (just threads are boring, right?), please share your code. I would greatly appreciate it.</p>\n\n<pre><code>public static void main(String[] args) {\n    long time = System.currentTimeMillis();\n    generate(\"stack\");\n    generate(\"over\");\n    generate(\"flow\");\n    generate(\"rulez\");\n\n    System.out.println(\"Took \" + (System.currentTimeMillis() - time) + \" ms\");\n}\n\nprivate static void generate(String goal) {\n    long[] seed = generateSeed(goal, Long.MIN_VALUE, Long.MAX_VALUE);\n    System.out.println(seed[0]);\n    System.out.println(randomString(seed[0], (char) seed[1]));\n}\n\npublic static long[] generateSeed(String goal, long start, long finish) {\n    char[] input = goal.toCharArray();\n    char[] pool = new char[input.length];\n    label:\n    for (long seed = start; seed &lt; finish; seed++) {\n        Random random = new Random(seed);\n\n        for (int i = 0; i &lt; input.length; i++)\n            pool[i] = (char) random.nextInt(27);\n\n        if (random.nextInt(27) == 0) {\n            int base = input[0] - pool[0];\n            for (int i = 1; i &lt; input.length; i++) {\n                if (input[i] - pool[i] != base)\n                    continue label;\n            }\n            return new long[]{seed, base};\n        }\n\n    }\n\n    throw new NoSuchElementException(\"Sorry :/\");\n}\n\npublic static String randomString(long i, char base) {\n    System.out.println(\"Using base: '\" + base + \"'\");\n    Random ran = new Random(i);\n    StringBuilder sb = new StringBuilder();\n    for (int n = 0; ; n++) {\n        int k = ran.nextInt(27);\n        if (k == 0)\n            break;\n\n        sb.append((char) (base + k));\n    }\n\n    return sb.toString();\n}\n</code></pre>\n\n<p>Output:</p>\n\n<pre><code>-9223372036808280701\nUsing base: 'Z'\nstack\n-9223372036853943469\nUsing base: 'b'\nover\n-9223372036852834412\nUsing base: 'e'\nflow\n-9223372036838149518\nUsing base: 'd'\nrulez\nTook 7087 ms\n</code></pre>\n"
+        },
+        {
+          "answer_id": 15189232,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>I wrote a quick program to find these seeds:</p>\n\n<pre><code>import java.lang.*;\nimport java.util.*;\nimport java.io.*;\n\npublic class RandomWords {\n    public static void main (String[] args) {\n        Set&lt;String&gt; wordSet = new HashSet&lt;String&gt;();\n        String fileName = (args.length &gt; 0 ? args[0] : \"/usr/share/dict/words\");\n        readWordMap(wordSet, fileName);\n        System.err.println(wordSet.size() + \" words read.\");\n        findRandomWords(wordSet);\n    }\n\n    private static void readWordMap (Set&lt;String&gt; wordSet, String fileName) {\n        try {\n            BufferedReader reader = new BufferedReader(new FileReader(fileName));\n            String line;\n            while ((line = reader.readLine()) != null) {\n                line = line.trim().toLowerCase();\n                if (isLowerAlpha(line)) wordSet.add(line);\n            }\n        }\n        catch (IOException e) {\n            System.err.println(\"Error reading from \" + fileName + \": \" + e);\n        }\n    }\n\n    private static boolean isLowerAlpha (String word) {\n        char[] c = word.toCharArray();\n        for (int i = 0; i &lt; c.length; i++) {\n            if (c[i] &lt; 'a' || c[i] &gt; 'z') return false;\n        }\n        return true;\n    }\n\n    private static void findRandomWords (Set&lt;String&gt; wordSet) {\n        char[] c = new char[256];\n        Random r = new Random();\n        for (long seed0 = 0; seed0 &gt;= 0; seed0++) {\n            for (int sign = -1; sign &lt;= 1; sign += 2) {\n                long seed = seed0 * sign;\n                r.setSeed(seed);\n                int i;\n                for (i = 0; i &lt; c.length; i++) {\n                    int n = r.nextInt(27);\n                    if (n == 0) break;\n                    c[i] = (char)((int)'a' + n - 1);\n                }\n                String s = new String(c, 0, i);\n                if (wordSet.contains(s)) {\n                    System.out.println(s + \": \" + seed);\n                    wordSet.remove(s);\n                }\n            }\n        }\n    }\n}\n</code></pre>\n\n<p>I have it running in the background now, but it's already found enough words for a classic pangram:</p>\n\n<pre><code>import java.lang.*;\nimport java.util.*;\n\npublic class RandomWordsTest {\n    public static void main (String[] args) {\n        long[] a = {-73, -157512326, -112386651, 71425, -104434815,\n                    -128911, -88019, -7691161, 1115727};\n        for (int i = 0; i &lt; a.length; i++) {\n            Random r = new Random(a[i]);\n            StringBuilder sb = new StringBuilder();\n            int n;\n            while ((n = r.nextInt(27)) &gt; 0) sb.append((char)('`' + n));\n            System.out.println(sb);\n        }\n    }\n}\n</code></pre>\n\n<p>(<a href=\"http://ideone.com/RnDYd2\">Demo on ideone.</a>)</p>\n\n<p>Ps. <code>-727295876, -128911, -1611659, -235516779</code>.</p>\n"
+        },
+        {
+          "answer_id": 15198628,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>Everyone here did a great job of explaining how the code works and showing how you can construct your own examples, but here's an information theoretical answer showing why we can reasonably expect a solution to exist that the brute force search will eventually find.</p>\n\n<p>The 26 different lower-case letters form our alphabet <code>Σ</code>. To allow generating words of different lengths, we further add a terminator symbol <code>⊥</code> to yield an extended alphabet <code>Σ' := Σ ∪ {⊥}</code>.</p>\n\n<p>Let <code>α</code> be a symbol and X a uniformly distributed random variable over <code>Σ'</code>. The probability of obtaining that symbol, <code>P(X = α)</code>, and its information content, <code>I(α)</code>, are given by:</p>\n\n<blockquote>\n  <p>P(X = α) = 1/|Σ'| = 1/27</p>\n  \n  <p>I(α) = -log₂[P(X = α)] = -log₂(1/27) = log₂(27)</p>\n</blockquote>\n\n<p>For a word <code>ω ∈ Σ*</code> and its <code>⊥-</code>terminated counterpart <code>ω' := ω · ⊥ ∈ (Σ')*</code>, we have</p>\n\n<blockquote>\n  <p>I(ω) := I(ω') = |ω'| * log₂(27) = (|ω| + 1) * log₂(27)</p>\n</blockquote>\n\n<p>Since the Pseudorandom Number Generator (PRNG) is initialized with a 32-bit seed, we can expect most words of length up to</p>\n\n<blockquote>\n  <p>λ = floor[32/log₂(27)] - 1 = 5</p>\n</blockquote>\n\n<p>to be generated by at least one seed. Even if we were to search for a 6-character word, we would still be successful about 41.06% of the time. Not too shabby.</p>\n\n<p>For 7 letters we're looking at closer to 1.52%, but I hadn't realized that before giving it a try:</p>\n\n<pre><code>#include &lt;iostream&gt;\n#include &lt;random&gt;\n\nint main()\n{\n    std::mt19937 rng(631647094);\n    std::uniform_int_distribution&lt;char&gt; dist('a', 'z' + 1);\n\n    char alpha;\n    while ((alpha = dist(rng)) != 'z' + 1)\n    {\n        std::cout &lt;&lt; alpha;\n    }\n}\n</code></pre>\n\n<p>See the output: <a href=\"http://ideone.com/JRGb3l\">http://ideone.com/JRGb3l</a></p>\n"
+        },
+        {
+          "answer_id": 15199966,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>Most random number generators are, in fact, \"pseudo random.\" They are Linear Congruential Generators, or LCGs (<a href=\"http://en.wikipedia.org/wiki/Linear_congruential_generator\">http://en.wikipedia.org/wiki/Linear_congruential_generator</a>)</p>\n\n<p>LCGs are quite predictable given a fixed seed. Basically, use a seed that gives you your first letter, then write an app that continues to generate the next int (char) until you hit the next letter in your target string and write down how many times you had to invoke the LCG. Continue until you've generated each and every letter.</p>\n"
+        },
+        {
+          "answer_id": 15244146,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>From the Java docs, this is an intentional feature when specifying a seed value for the Random class.</p>\n\n<blockquote>\n  <p>If two instances of Random are created with the same seed, and the\n  same sequence of method calls is made for each, they will generate and\n  return identical sequences of numbers. In order to guarantee this\n  property, particular algorithms are specified for the class Random.\n  Java implementations must use all the algorithms shown here for the\n  class Random, for the sake of absolute portability of Java code.</p>\n</blockquote>\n\n<p><a href=\"http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Random.html\">http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Random.html</a></p>\n\n<p>Odd though, you would think there are implicit security issues in having predictable 'random' numbers.</p>\n"
+        },
+        {
+          "answer_id": 15272435,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>Derived from <a href=\"http://stackoverflow.com/a/15187009/1208581\">Denis Tulskiy</a>'s answer, this method generates the seed.</p>\n\n<pre><code>public static long generateSeed(String goal, long start, long finish) {\n    char[] input = goal.toCharArray();\n    char[] pool = new char[input.length];\n    label:\n        for (long seed = start; seed &lt; finish; seed++) {\n            Random random = new Random(seed);\n\n            for (int i = 0; i &lt; input.length; i++)\n                pool[i] = (char) (random.nextInt(27)+'`');\n\n            if (random.nextInt(27) == 0) {\n                for (int i = 0; i &lt; input.length; i++) {\n                    if (input[i] != pool[i])\n                        continue label;\n                }\n                return seed;\n            }\n\n        }\n\n    throw new NoSuchElementException(\"Sorry :/\");\n}\n</code></pre>\n"
+        },
+        {
+          "answer_id": 17096574,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>The principal is the Random Class constructed with the same seed will generate the same pattern of numbers every time.</p>\n"
+        },
+        {
+          "answer_id": 17959954,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>It is about \"seed\". Same seeds give the same result.</p>\n"
+        },
+        {
+          "answer_id": 19192143,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>As multi-threading is very easy with Java, here is a variant that searches for a seed using all cores available: <a href=\"http://ideone.com/ROhmTA\">http://ideone.com/ROhmTA</a></p>\n\n<pre><code>import java.util.ArrayList;\nimport java.util.Random;\nimport java.util.concurrent.Callable;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.ThreadFactory;\n\npublic class SeedFinder {\n\n  static class SearchTask implements Callable&lt;Long&gt; {\n\n    private final char[] goal;\n    private final long start, step;\n\n    public SearchTask(final String goal, final long offset, final long step) {\n      final char[] goalAsArray = goal.toCharArray();\n      this.goal = new char[goalAsArray.length + 1];\n      System.arraycopy(goalAsArray, 0, this.goal, 0, goalAsArray.length);\n      this.start = Long.MIN_VALUE + offset;\n      this.step = step;\n    }\n\n    @Override\n    public Long call() throws Exception {\n      final long LIMIT = Long.MAX_VALUE - this.step;\n      final Random random = new Random();\n      int position, rnd;\n      long seed = this.start;\n\n      while ((Thread.interrupted() == false) &amp;&amp; (seed &lt; LIMIT)) {\n        random.setSeed(seed);\n        position = 0;\n        rnd = random.nextInt(27);\n        while (((rnd == 0) &amp;&amp; (this.goal[position] == 0))\n                || ((char) ('`' + rnd) == this.goal[position])) {\n          ++position;\n          if (position == this.goal.length) {\n            return seed;\n          }\n          rnd = random.nextInt(27);\n        }\n        seed += this.step;\n      }\n\n      throw new Exception(\"No match found\");\n    }\n  }\n\n  public static void main(String[] args) {\n    final String GOAL = \"hello\".toLowerCase();\n    final int NUM_CORES = Runtime.getRuntime().availableProcessors();\n\n    final ArrayList&lt;SearchTask&gt; tasks = new ArrayList&lt;&gt;(NUM_CORES);\n    for (int i = 0; i &lt; NUM_CORES; ++i) {\n      tasks.add(new SearchTask(GOAL, i, NUM_CORES));\n    }\n\n    final ExecutorService executor = Executors.newFixedThreadPool(NUM_CORES, new ThreadFactory() {\n\n      @Override\n      public Thread newThread(Runnable r) {\n        final Thread result = new Thread(r);\n        result.setPriority(Thread.MIN_PRIORITY); // make sure we do not block more important tasks\n        result.setDaemon(false);\n        return result;\n      }\n    });\n    try {\n      final Long result = executor.invokeAny(tasks);\n      System.out.println(\"Seed for \\\"\" + GOAL + \"\\\" found: \" + result);\n    } catch (Exception ex) {\n      System.err.println(\"Calculation failed: \" + ex);\n    } finally {\n      executor.shutdownNow();\n    }\n  }\n}\n</code></pre>\n"
+        },
+        {
+          "answer_id": 23049403,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>I was intrigued by this, I ran this random  word generator on a dictionary word list.\nRange: Integer.MIN_VALUE to Integer.MAX_VALUE</p>\n\n<p>I got 15131 hits.</p>\n\n<pre><code>int[] arrInt = {-2146926310, -1885533740, -274140519, \n                -2145247212, -1845077092, -2143584283,\n                -2147483454, -2138225126, -2147375969};\n\nfor(int seed : arrInt){\n    System.out.print(randomString(seed) + \" \");\n}\n</code></pre>\n\n<p>Prints</p>\n\n<pre><code>the quick browny fox jumps over a lazy dog \n</code></pre>\n"
+        },
+        {
+          "answer_id": 40406100,
+          "title": "Why does this code using random strings print &quot;hello world&quot;?",
+          "body": "<p>Here is a minor improvement for Denis Tulskiy <a href=\"http://stackoverflow.com/a/15187009/1129332\">answer</a>. It cuts the time by half</p>\n\n<pre><code>public static long[] generateSeed(String goal, long start, long finish) {\n    char[] input = goal.toCharArray();\n\n    int[] dif = new int[input.length - 1];\n    for (int i = 1; i &lt; input.length; i++) {\n        dif[i - 1] = input[i] - input[i - 1];\n    }\n\n    mainLoop:\n    for (long seed = start; seed &lt; finish; seed++) {\n        Random random = new Random(seed);\n        int lastChar = random.nextInt(27);\n        int base = input[0] - lastChar;\n        for (int d : dif) {\n            int nextChar = random.nextInt(27);\n            if (nextChar - lastChar != d) {\n                continue mainLoop;\n            }\n            lastChar = nextChar;\n        }\n        if(random.nextInt(27) == 0){\n            return new long[]{seed, base};\n        }\n    }\n\n    throw new NoSuchElementException(\"Sorry :/\");\n}\n</code></pre>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 6571,
+        "user_id": 1031797,
+        "user_type": "registered",
+        "accept_rate": 47,
+        "profile_image": "https://www.gravatar.com/avatar/331bd6bab092563bcd9fabc83e9745f0?s=128&d=identicon&r=PG",
+        "display_name": "0x56794E",
+        "link": "http://stackoverflow.com/users/1031797/0x56794e"
+      },
+      "answer_count": 14,
+      "last_activity_date": 1478188710,
+      "question_id": 15182496,
+      "title": "Why does this code using random strings print &quot;hello world&quot;?",
+      "body": "<p>The following print statement would print \"hello world\".\nCould anyone explain this?</p>\n\n<pre><code>System.out.println(randomString(-229985452) + \" \" + randomString(-147909649));\n</code></pre>\n\n<p>And <code>randomString()</code> looks like this:</p>\n\n<pre><code>public static String randomString(int i)\n{\n    Random ran = new Random(i);\n    StringBuilder sb = new StringBuilder();\n    while (true)\n    {\n        int k = ran.nextInt(27);\n        if (k == 0)\n            break;\n\n        sb.append((char)('`' + k));\n    }\n\n    return sb.toString();\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "reactjs",
+        "redux",
+        "reducers"
+      ],
+      "answers": [
+        {
+          "answer_id": 40396645,
+          "title": "hello world reducer for react/redux",
+          "body": "<p>The reducer holds your state. So the way of thinking about it is \"what are the parts of my program that can change?\" And then from there, the next question is \"What is the minimal amount of state needed to hold on to my program?\"</p>\n\n<p>From looking at your example, I get the impression that you are trying to build an application that sometimes displays \"hello world\" in the UI. Let me make a few more interactions to help describe all the pieces.</p>\n\n<p>Initially, I'll help you create a program that has an empty label and a button. When you click on the button, it will display \"hello world\".</p>\n\n<p>Okay, so to answer the first question: What can change? The app can either display \"hello world\" or nothing. We could store that in a couple of different ways. If the string is hard-coded, like you've alluded to above, then really you have a <code>bool</code> of show the message, or not.</p>\n\n<p>And to the second question: one truthy value is pretty much the definition of a minimal state. So let's make a reducer:</p>\n\n<pre><code>var initialState = {\n    showMessage: false,\n};\n\nvar reducer = function(state, action) {\n    var newState = Object.assign({}, state);\n    if (action.type === 'BUTTON_PRESS') {\n        newState.showMessage = !newState.showMessage;\n    }\n    return newState;\n}\n</code></pre>\n\n<p>Okay, so now we've created a reducer that, when it gets the BUTTON_PRESS action, it flips the bit of its state.</p>\n\n<p>Now, let's talk about how to hook that reducer up to redux. Right now, the reducer is a plain javascript function. We just need to pass that store into redux with the initial state. [createStore][1]</p>\n\n<p>P.S. I normally write ES2015 code so there may be small typos in the commonJS import syntax</p>\n\n<pre><code>var redux = require('redux');\nvar store = redux.createStore(reducer, initialState);\n</code></pre>\n\n<p>The next part is to look at <code>redux-react</code>.\nRedux-react is glue that works <em>both ways</em> in react. It connects data from the redux store to react props, and it connects react callbacks (such as a click) to redux actions.</p>\n\n<p>So conceptually, it looks like this. You have a react component that has a button. When you click the button, we want to generate a 'BUTTON_PRESS' action. After this, your react component no longer cares what happens to BUTTON_PRESS. Its job is done. BUTTON_PRESS could do one of infinite things. Now, assume that redux-react does its job and gets the action passed to the reducer. The reducer computes its new logic and returns a new state. This new state has the value of showMessage. Then, redux-react does the other half of connecting and makes showMessage a prop for the component. Just to be clear, there is no explicit reason why the same react component has to respond to the state changed by your action. They could be different components.</p>\n\n<p>To put it into bullet points, here is how the codeflow should work:</p>\n\n<ol>\n<li>We create an initial store with showMessage = false</li>\n<li>When creating the React component, we use <code>connect</code> to bind the <code>showMessage</code> to a prop, and to handle <code>onClick</code> of the button in the component to generate a 'BUTTON_PRESS' action.</li>\n<li>Since showMessage is false, there is originally only a button present.</li>\n<li>The user presses the button. React calls into the onClick handler</li>\n<li>We use redux-react to dispatch a BUTTON_PRESS event</li>\n<li>When redux gets an action, it calls the reducer with the current state and the action. The reducer is responsible for generating a new state in response to this action</li>\n<li>The reducer sets showMessage to true</li>\n<li>redux-react listens to store changes and when it changes it modifies the prop for the react component</li>\n<li>The prop changes so react calls render()\n\n<ol start=\"10\">\n<li>Inside your render method you see that this.props.showMessage is true, so you display the message.</li>\n</ol></li>\n</ol>\n\n<p>And here is how such a react component could be implemented. There are enough differences between React components in ES5 vs ES2015 that I'm just going to give you the ES2015 version and apologize again.</p>\n\n<pre><code>class HelloWorld extends Component {\n    render() {\n        const message = this.props.showMessage ? \"Hello world!\" : \"\";\n        return (\n        &lt;div id=\"label\"&gt;{message}&lt;/div&gt;\n        &lt;div id=\"button\" onClick={this.props.handleOnClick}&gt;Toggle the message &lt;/div&gt;\n        );\n    }\n}\n\nHelloWorld.propTypes = {\n    showMessage: PropTypes.bool.isRequired,\n    handleOnClick: PropTypes.func.isRequired,\n};\n\nconst mapStateToProps = state =&gt; ({\n    showMessage: state.showMessage,\n\n});\n\nconst mapDispatchToProps = dispatch =&gt; ({\n    handleOnClick: dispatch({ type: 'BUTTON_PRESS', payload: '' })\n});\n\nexport default connect(mapStateToProps, mapDispatchToProps)(HelloWorld);\n</code></pre>\n\n<p>You can keep reading the docs but I hope that helps explain what all the parts are. Let me know if anything isn't clear.\n      [1]: <a href=\"http://redux.js.org/docs/api/createStore.html\" rel=\"nofollow noreferrer\">http://redux.js.org/docs/api/createStore.html</a></p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 13,
+        "user_id": 6110866,
+        "user_type": "registered",
+        "accept_rate": 57,
+        "profile_image": "https://i.stack.imgur.com/C5vcw.jpg?s=128&g=1",
+        "display_name": "Colin Aulds",
+        "link": "http://stackoverflow.com/users/6110866/colin-aulds"
+      },
+      "answer_count": 1,
+      "last_activity_date": 1478160992,
+      "question_id": 40396212,
+      "title": "hello world reducer for react/redux",
+      "body": "<p>There are a few other hello world app questions with regard to react, but mine is specific to the reducer. Im not exactly sure what I should put in the reducer for my specific action. </p>\n\n<p>Note*: I thought maybe i need to add a message: \"\" key value pair to my initial state and then declare a </p>\n\n<pre><code>var newState = Object.assign({}, state, {\n      message:\"hello world\"\n    });\n</code></pre>\n\n<p>into my if statement in the reducer, then dispatch it in the component, but that seems unneccesary since it should always print hello world, so hard coding seems more efficient. Hopefully there isn't too much clutter in this question as well. </p>\n\n<p>Here is my component:</p>\n\n<pre><code>var HelloWorld = React.createClass({\n  helloWorld: function() {\n    this.props.dispatch(actions.printHello());\n  },\n  render: function() {\n    return (\n      &lt;div className=\"HelloWorld\"&gt;\n        &lt;h1&gt;Hello World!&lt;/h1&gt;\n      &lt;/div&gt;\n    );\n  }\n});\n\nvar Container = connect()(HelloWorld);\n\nmodule.exports = Container;\n</code></pre>\n\n<p>my action:</p>\n\n<pre><code>var $ = require(\"jquery\")\n\nvar PRINT_HELLO = 'PRINT_HELLO';\nvar printHello = function() {\n    return {\n        type: GUESS_NUM\n    };\n};\n\nexports.PRINT_HELLO = PRINT_HELLO;\nexports.printHello = printHello;\n</code></pre>\n\n<p>and reducer:</p>\n\n<pre><code>var actions = require('./actions');\n\nvar initialRepositoryState = {\n  type: null\n};\n\nvar capstoneApp = function (state,action) {\n  state = state || initialRepositoryState;\n\n\n  if (action.type === actions.PRINT_HELLO) {\n    var newState = Object.assign({}, state, {\n      message:\"hello world\"\n    });\n    return newState;\n  }\n};\n</code></pre>\n\n<p>I don't think you will need my index.js but I will provide if necessary. \nThanks in advance for input!</p>\n"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 10000,
+  "quota_remaining": 9970
+}

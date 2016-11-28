@@ -121,9 +121,14 @@ module.exports = function (options) {
          * Returns file content as string
          *
          */
+        // {
+        //   test: /\.css$/,
+        //   loaders: ['to-string-loader', 'css-loader']
+        // },
+
         {
-          test: /\.css$/,
-          loaders: ['to-string-loader', 'css-loader']
+          test: /\.(css|scss)$/,
+          loaders: ['to-string-loader', 'css-loader',  'sass-loader']
         },
 
         /* Raw loader support for *.html

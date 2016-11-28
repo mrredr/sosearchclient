@@ -14,15 +14,19 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
+import { Results } from './results/results.service';
+import { SearchComponent } from './search';
+import { ResultsComponent } from './results';
+import { ResultsTableComponent } from './results/results-table';
+
+import { QuestionComponent } from './question';
 import { NoContentComponent } from './no-content';
-import { XLarge } from './home/x-large';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  Results
 ];
 
 type StoreType = {
@@ -38,10 +42,11 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
-    HomeComponent,
-    NoContentComponent,
-    XLarge
+    SearchComponent,
+    ResultsComponent,
+    ResultsTableComponent,
+    QuestionComponent,
+    NoContentComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -49,7 +54,7 @@ type StoreType = {
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
+  providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS
   ]
@@ -93,4 +98,3 @@ export class AppModule {
   }
 
 }
-

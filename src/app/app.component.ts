@@ -13,31 +13,13 @@ import { AppState } from './app.service';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.css'
+    './app.component.scss'
   ],
   template: `
     <nav>
       <span>
-        <a [routerLink]=" ['./'] ">
-          Index
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
+        <a [routerLink]=" ['./search'] ">
+          Search
         </a>
       </span>
     </nav>
@@ -45,17 +27,6 @@ import { AppState } from './app.service';
     <main>
       <router-outlet></router-outlet>
     </main>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-    <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
-    </footer>
   `
 })
 export class AppComponent {
